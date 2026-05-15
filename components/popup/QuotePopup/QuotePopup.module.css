@@ -1,0 +1,303 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(6, 16, 28, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 16px;
+}
+
+.modalDialog {
+  position: relative;
+  width: auto;
+  max-width: 620px;
+  margin: 28px auto;
+  pointer-events: none;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background: var(--white);
+  box-shadow: 0 32px 80px rgba(0, 113, 197, 0.2);
+  outline: 0;
+  overflow: hidden;
+  animation: modalFadeIn 0.35s ease both;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popHeader {
+  background: var(--blue);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popHeaderLeft p {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+.popHeaderLeft h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.popClose {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.popClose:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.popQuick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 32px 0;
+}
+
+.popPhone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popPhone:hover {
+  background: var(--blue2);
+}
+
+.popEmail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--light);
+  color: var(--blue);
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1.5px solid var(--blueM);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.popEmail:hover {
+  background: var(--blueM);
+}
+
+.popBody {
+  padding: 20px 32px 28px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formGroup {
+  margin-bottom: 12px;
+}
+
+.popLabel {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.popInput,
+.popSelect,
+.popTextarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  background: var(--offW);
+  color: var(--text);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.popInput:focus,
+.popSelect:focus,
+.popTextarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 113, 197, 0.1);
+  background: #fff;
+}
+
+.popInput::placeholder,
+.popTextarea::placeholder {
+  color: #aac4dc;
+}
+
+.popSelect {
+  color: var(--muted);
+  appearance: none;
+}
+
+.popTextarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.popSubmit {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+.popSubmit:hover {
+  background: var(--blue2);
+}
+
+.popLater {
+  width: 100%;
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  padding: 11px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.popLater:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.popSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  text-align: center;
+  gap: 14px;
+}
+
+.popSuccess h3 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.popSuccess p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 8px;
+  }
+
+  .modalDialog {
+    max-width: 100%;
+    margin: 8px auto;
+    min-height: calc(100vh - 16px);
+    align-items: center;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .popHeader {
+    padding: 20px;
+  }
+
+  .popQuick {
+    padding: 16px 20px 0;
+  }
+
+  .popBody {
+    padding: 16px 20px 22px;
+  }
+
+  .popHeaderLeft h2 {
+    font-size: 1.3rem;
+  }
+
+  .popEmail {
+    word-break: break-all;
+  }
+}
+
+@media (max-height: 640px) {
+  .modalDialog {
+    align-items: flex-start;
+  }
+}
