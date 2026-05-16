@@ -33,8 +33,11 @@ body.modalOpen {
 }
 
 .container { max-width: 1400px; margin: 0 auto;}
-
 #home, #why, #process {overflow-x: hidden;}
+
+@media (max-width: 767px) {
+  #why-choose { overflow-x: hidden;}
+}
 
 /* ── SECTION SHARED ──────────────────────────── */
 .sec{padding:90px 5%}

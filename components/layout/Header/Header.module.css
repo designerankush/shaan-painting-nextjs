@@ -27,6 +27,7 @@
 .mnav li{list-style:none;border-bottom:1px solid var(--border)}
 .mnav a{display:block;padding:15px 0;color:var(--text);font-weight:600;font-size:.95rem}
 .mnav .m-cta{background:var(--blue);color:var(--white);text-align:center;padding:15px;margin-top:14px;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;display:block}
+.mnav .m-cta svg{ display: inline-block; vertical-align: middle; margin-right: 5px;}
 
 
 /* ── RESPONSIVE ──────────────────────────────── */

@@ -79,11 +79,7 @@ export default function WhyUs() {
                       <div className={cx('wib-stat')}>
                         <div className={cx('wib-n')}>{stat.value}</div>
                         <div className={cx('wib-l')}>{stat.label}</div>
-                      </div>
-
-                      {index < whyChooseUsContent.stats.length - 1 && (
-                        <div className={cx('wib-div')}></div>
-                      )}
+                      </div> 
                     </div>
                   ))}
                 </div>
