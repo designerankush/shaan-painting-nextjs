@@ -13,6 +13,7 @@ import Popup from '@/components/popup/QuotePopup/QuotePopup';
 import Process from './components/Process/Process';
 import Services from './components/Services/Services';
 import Ticker from './components/Ticker/Ticker';
+import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import WhyUs from './components/WhyUs/WhyUs';
 import GoogleReviewStrip from './components/GoogleReviewStrip/GoogleReviewStrip';
 
@@ -66,6 +67,7 @@ export default function HomePage() {
       <Gallery onOpen={setLightboxSrc} />
       <BeforeAfter />
       <Process />
+      <WhyChooseUs />
       <WhyUs />
       <Contact />      
       <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />

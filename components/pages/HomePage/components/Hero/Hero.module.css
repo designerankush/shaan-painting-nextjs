@@ -43,6 +43,7 @@
   .ft-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:768px){
+  .hdots{bottom:20px;}
   .nlinks,.ncta{display:none}
   .hmbg{display:flex}
   .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:180px}

@@ -165,6 +165,84 @@ export const processSteps = [
   ['4', 'Flawless Finish', "Premium paint applied with care. We clean up completely and only leave when you're 100% satisfied."],
 ];
 
+export const whyChooseUsContent = {
+  eyebrow: 'Why Choose Shaan',
+  title: 'Why Homeowners',
+  highlight: 'Trust Us.',
+  intro:
+    'We are a locally trusted painting company committed to quality, honesty and results that last. Every job — big or small — receives the same professional standard.',
+
+  image: {
+    src: IMG.img2,
+    alt: 'Quality painting work',
+  },
+
+  button: {
+    label: 'Get Free Quote Today',
+    href: '#contact',
+  },
+
+  stats: [
+    { value: '500+', label: 'Projects Done' },
+    { value: '10+', label: 'Years Exp.' },
+    { value: '100%', label: 'Guaranteed' },
+  ],
+
+  items: [
+    {
+      title: 'Fully Insured',
+      description:
+        "All work covered by full public liability insurance. You're completely protected on every single job.",
+    },
+    {
+      title: 'Dulux Premium Paints',
+      description:
+        'We use only premium Dulux and quality brand paints — better coverage, richer colour, longer lasting finish.',
+    },
+    {
+      title: 'No Deposit Required',
+      description:
+        'We never ask for upfront deposits. Start your project with complete confidence and zero financial risk.',
+    },
+    {
+      title: 'Payment After Quality Work',
+      description:
+        'You only pay when you are 100% satisfied with the finished result. Your satisfaction is our guarantee.',
+    },
+    {
+      title: 'Professional Preparation',
+      description:
+        'Expert sanding, filling, priming and cleaning before any paint is applied. This is what makes results last.',
+    },
+    {
+      title: 'Free On-Site Quotes',
+      description:
+        'Detailed, honest quotes at no cost and no pressure. We visit your property and give you a fair price.',
+    },
+    {
+      title: 'Reliable Communication',
+      description:
+        'We keep you updated at every stage. No surprises — just clear, honest communication from start to finish.',
+    },
+    {
+      title: 'Spotless Worksite',
+      description:
+        'All surfaces protected, all drop sheets laid. We leave your home cleaner than we found it — every time.',
+    },
+  ],
+
+  ctaStrip: {
+    title: 'Ready to get started?',
+    text: 'Call us today for a free, no-obligation on-site quote.',
+    call: {
+      label: '0451 644 200',
+      href: 'tel:0451644200',
+    },
+    quote: {
+      label: 'Free Quote',
+    },
+  },
+};
 
 export const whyChooseContent = {
   eyebrow: 'Why Choose Shaan',
