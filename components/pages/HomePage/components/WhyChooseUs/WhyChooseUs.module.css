@@ -56,5 +56,5 @@
     .why-header{grid-template-columns:1fr; gap:30px}
     .why-body{grid-template-columns: 1fr;gap:40px;}
     .why-img-wrap{position:static;}
-    .why-cta-strip{flex-direction: column;
+    .why-cta-strip{flex-direction: column;}
 }

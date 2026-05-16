@@ -42,7 +42,7 @@ export default function WhyUs() {
   };
 
   return (
-    <section className={cx('why-sec')} id="why">
+    <section className={cx('why-sec')} id="why-choose">
       <div className={cx('why-inner')}>
         <div className={cx('why-header', 'reveal')}>
           <div className={cx('why-header-left')}>
