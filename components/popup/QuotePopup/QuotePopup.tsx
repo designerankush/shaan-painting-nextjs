@@ -20,21 +20,17 @@ export default function QuotePopup() {
   };
 
   useEffect(() => {
-    if (!isOpen) return;
-
-    document.body.classList.add('modalOpen');
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') closePopup();
+    const openPopup = () => {
+      setIsSuccess(false);
+      setIsOpen(true);
     };
 
-    window.addEventListener('keydown', handleEscape);
+    window.addEventListener('openQuotePopup', openPopup);
 
     return () => {
-      document.body.classList.remove('modalOpen');
-      window.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('openQuotePopup', openPopup);
     };
-  }, [isOpen]);
+  }, []);
 
   if (!isOpen) return null;
 

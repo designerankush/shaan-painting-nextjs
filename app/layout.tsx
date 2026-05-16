@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Barlow } from 'next/font/google';
+import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
+import Header from '@/components/layout/Header/Header';
 import './globals.css';
+import Footer from '@/components/layout/Footer/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -9,11 +12,11 @@ const inter = Inter({
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const barlow = Barlow({
   subsets: ['latin'],
-  weight: ['700', '800', '900'],
+  weight: ['600', '700', '800'],
   style: ['normal', 'italic'],
-  variable: '--font-playfair',
+  variable: '--font-barlow',
   display: 'swap',
 });
 
@@ -81,8 +84,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.variable} ${barlow.variable}`}>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        <MobileSticky />
+      </body>
     </html>
   );
 }

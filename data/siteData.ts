@@ -1,8 +1,20 @@
 export const IMG = {
   logo: '/images/logo.png',
-  img1: '/images/img1.jpg', img2: '/images/img2.jpg', img3: '/images/img3.jpg', img4: '/images/img4.jpg', img5: '/images/img5.jpg',
-  img6: '/images/img6.jpg', img7: '/images/img7.jpg', img8: '/images/img8.jpg', img9: '/images/img9.jpg', img10: '/images/img10.jpg',
-  img11: '/images/img11.jpg', img12: '/images/img12.jpg', img13: '/images/img13.jpg', img14: '/images/img14.jpg', img15: '/images/img15.jpg',
+  img1: '/images/hero/shaan-slide1.webp', 
+  img2: '/images/hero/shaan-slide2.webp', 
+  img3: '/images/hero/shaan-slide3.webp', 
+  img4: '/images/img3.jpg', 
+  img5: '/images/img4.jpg', 
+  img6: '/images/img5.jpg',
+  img7: '/images/img6.jpg', 
+  img8: '/images/img8.jpg', 
+  img9: '/images/img9.jpg', 
+  img10: '/images/img10.jpg',
+  img11: '/images/img11.jpg', 
+  img12: '/images/img12.jpg', 
+  img13: '/images/img13.jpg', 
+  img14: '/images/img14.jpg', 
+  img15: '/images/img15.jpg',
 };
 
 export const headerContent = {
@@ -41,11 +53,16 @@ export const navLinks = [
 
 export const heroSlides = [
   { src: IMG.img1, tag: 'Porch Transformation' },
-  { src: IMG.img7, tag: 'Full Exterior Repaint' },
-  { src: IMG.img2, tag: 'Heritage Home Restored' },
-  { src: IMG.img14, tag: 'Cottage Restoration' },
-  { src: IMG.img10, tag: 'Interior French Doors' },
+  { src: IMG.img2, tag: 'Full Exterior Repaint' },
+  { src: IMG.img3, tag: 'Heritage Home Restored' }, 
 ];
+
+export const googleReviewStripContent = {
+  logoText: 'Google Reviews',
+  rating: '5.0',
+  label: 'Trusted by homeowners across Australia',
+  badges: ['5-Star Service', 'Professional & Reliable', 'Licensed & Insured'],
+};
 
 export const footerContent = {
   brand: {
@@ -101,13 +118,25 @@ export const footerContent = {
   },
 };
 
+export const mobileStickyContent = {
+  call: {
+    label: 'Call Now',
+    text: '0451 644 200',
+    href: 'tel:0451644200',
+  },
+  quote: {
+    label: 'Free Quote',
+    text: 'No obligation',
+  },
+};
+
 export const services = [
-  ['01', '🏠', 'Exterior House Painting', 'Full repaints — weatherboard prep, power wash, prime and topcoat. We restore aged exteriors to pristine condition that lasts.'],
-  ['02', '🛋️', 'Interior Painting', 'Walls, ceilings, trims and built-ins. We protect your furnishings, fill and sand all defects, and deliver a smooth lasting finish.'],
-  ['03', '🪵', 'Weatherboard Restoration', 'Specialist stripping and repainting of deteriorated weatherboard — full surface repair, prime and premium topcoats applied.'],
-  ['04', '🚪', 'Doors & Trim', 'Heritage doors, French doors, window frames — stained, painted or varnished to bring timber back to life beautifully.'],
-  ['05', '🏗️', 'New Construction', 'Working alongside builders on new homes and renovations — on time, on budget, and to exact specification every time.'],
-  ['06', '🎨', 'Porch, Deck & Floor', 'Verandah floors, outdoor decks — proper surface prep and quality deck paint for a hard-wearing, beautiful result underfoot.'],
+  ['01', '🏠', 'Interior House Painting Melbourne', 'Full repaints — weatherboard prep, power wash, prime and topcoat. We restore aged exteriors to pristine condition that lasts.'],
+  ['02', '🛋️', 'Exterior House Painters Melbourne', 'Walls, ceilings, trims and built-ins. We protect your furnishings, fill and sand all defects, and deliver a smooth lasting finish.'],
+  ['03', '🖌️', 'Weatherboard Restoration', 'Specialist stripping and repainting of deteriorated weatherboard — full surface repair, prime and premium topcoats applied.'],
+  ['04', '🚪', 'New Home Painting', 'Heritage doors, French doors, window frames — stained, painted or varnished to bring timber back to life beautifully.'],
+  ['05', '🏗️', 'Commercial Painting Services', 'Working alongside builders on new homes and renovations — on time, on budget, and to exact specification every time.'],
+  ['06', '🏘️', 'Roof & Timber Painting', 'Verandah floors, outdoor decks — proper surface prep and quality deck paint for a hard-wearing, beautiful result underfoot.'],
 ];
 
 export const galleryData = [
@@ -148,9 +177,7 @@ export const whyChooseContent = {
   items: [
     {
       icon: '✓',
-      title: 'Quality First. Payment After Satisfaction.',
-      description:
-        'All work completed by licenced professionals with full public liability insurance for your peace of mind.',
+      title: 'Quality First. Payment After Satisfaction.',       
     },
     {
       icon: '🔍',

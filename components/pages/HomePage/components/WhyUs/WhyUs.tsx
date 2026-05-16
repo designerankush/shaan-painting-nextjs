@@ -33,8 +33,7 @@ export default function WhyUs() {
             <div className={cx('wi')} key={item.title}>
               <em className={cx('wi-icon')}>{item.icon}</em>
               <div>
-                <h4>{item.title}</h4>
-                {item.description && <p>{item.description}</p>}
+                <h4>{item.title}</h4> 
               </div>
             </div>
           ))}

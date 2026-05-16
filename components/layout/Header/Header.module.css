@@ -10,7 +10,7 @@
 .nlogo{display:flex;align-items:center;gap:14px;text-decoration:none}
 .nlogo-img{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);box-shadow:0 4px 16px rgba(0,113,197,.25);transition:all .4s;flex-shrink:0}
 .nav.scrolled .nlogo-img{width:58px;height:58px}
-.nlogo-text strong{display:block;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--text);line-height:1.2;transition:font-size .4s}
+.nlogo-text strong{display:block;font-family: var(--font-barlow), serif;font-size:1.25rem;font-weight:800;color:var(--text);line-height:1.2;transition:font-size .4s}
 .nlogo-text span{display:block;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-top:2px}
 .nav.scrolled .nlogo-text strong{font-size:1.1rem}
 .nlinks{list-style:none;display:flex;gap:28px}
@@ -58,7 +58,7 @@
 @media(max-width:480px){
   .mosaic{grid-template-columns:1fr;grid-auto-rows:220px}
 }
-.footer-phone{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:8px;transition:color .2s}
+.footer-phone{display:block;font-family: var(--font-barlow), serif;font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:8px;transition:color .2s}
 .footer-phone:hover{color:var(--blueM)}
 .hdot{border:0;padding:0;display:block}
 

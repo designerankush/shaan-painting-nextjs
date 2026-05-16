@@ -1,7 +1,7 @@
 /* Component-scoped stylesheet for this component. */
 /* ── GALLERY ─────────────────────────────────── */
 .gallery-sec{background:var(--white);padding:90px 5%}
-.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:230px;gap:10px;max-width:1300px;margin:44px auto 0}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:230px;gap:10px;margin:40px auto 0}
 .mi{position:relative;overflow:hidden;cursor:pointer;border-radius:2px}
 .mi img{width:100%;height:100%;object-fit:cover;transition:transform .65s}
 .mi:hover img{transform:scale(1.08)}
@@ -39,7 +39,7 @@
 @media(max-width:480px){
   .mosaic{grid-template-columns:1fr;grid-auto-rows:220px}
 }
-.footer-phone{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:white;margin-bottom:8px;transition:color .2s}
+.footer-phone{display:block;font-family: var(--font-barlow), serif;font-size:1.5rem;font-weight:800;color:white;margin-bottom:8px;transition:color .2s}
 .footer-phone:hover{color:var(--blueM)}
 .hdot{border:0;padding:0;display:block}
 

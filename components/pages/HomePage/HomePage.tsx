@@ -6,9 +6,7 @@ import About from './components/About/About';
 import BeforeAfter from './components/BeforeAfter/BeforeAfter';
 import Contact from './components/Contact/Contact';
 import Cursor from '@/components/common/Cursor/Cursor';
-import Footer from '@/components/layout/Footer/Footer';
 import Gallery from './components/Gallery/Gallery';
-import Header from '@/components/layout/Header/Header';
 import Hero from './components/Hero/Hero';
 import Lightbox from '@/components/common/Lightbox/Lightbox';
 import Popup from '@/components/popup/QuotePopup/QuotePopup';
@@ -16,6 +14,7 @@ import Process from './components/Process/Process';
 import Services from './components/Services/Services';
 import Ticker from './components/Ticker/Ticker';
 import WhyUs from './components/WhyUs/WhyUs';
+import GoogleReviewStrip from './components/GoogleReviewStrip/GoogleReviewStrip';
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes
@@ -24,8 +23,6 @@ function cx(...classes: Array<string | false | null | undefined>) {
     .map((name) => styles[name] ?? name)
     .join(' ');
 }
-
-
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -61,8 +58,8 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <Cursor />
       <Popup />
-      <Header />
       <Hero />
+      <GoogleReviewStrip />
       <Ticker />
       <About />
       <Services />
@@ -70,8 +67,7 @@ export default function HomePage() {
       <BeforeAfter />
       <Process />
       <WhyUs />
-      <Contact />
-      <Footer />
+      <Contact />      
       <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
     </>
   );

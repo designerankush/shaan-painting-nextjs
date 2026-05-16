@@ -39,12 +39,12 @@ export default function Hero() {
       </div>
       <div className={cx('hov1')}></div><div className={cx('hov2')}></div>
       <div className={cx('hcont')}>
-        <div className={cx('htag')}><span className={cx('htag-line')}></span><span className={cx('htag-txt')}>Premium House Painters · DS Group Pty Ltd</span></div>
-        <h1>We Paint<br /><em>Beautiful</em><br />Homes.</h1>
-        <p className={cx('hsub')}>Meticulous preparation, premium paints, flawless results — every single project, guaranteed.</p>
+        <div className={cx('htag')}><span className={cx('htag-line')}></span><span className={cx('htag-txt')}>Fully Insured Residential & Commercial Painters</span></div>
+        <h1>Premium Painting Services Across<br /><em> Melbourne & Regional Victoria.</em></h1>
+        <p className={cx('hsub')}>Interior • Exterior • Weatherboard • New Homes <br/> Professional Dulux Finishes With Long-Lasting Results</p>
         <div className={cx('hbtns')}>
           <a href="#contact" className={cx('btn-fill')} onClick={(e) => scrollToSection(e, '#contact')}>Get Free Quote</a>
-          <a href="#gallery" className={cx('btn-out')} onClick={(e) => scrollToSection(e, '#gallery')}>View Our Work</a>
+          <a href="tel:0451644200" className={cx('btn-out')}>Call Shaan Today</a>
         </div>
       </div>
       <div className={cx('hdots')} id="hdots">{heroSlides.map((slide, index) => <button aria-label={slide.tag} className={cx('hdot', index === current ? 'active' : '')} key={slide.src} onClick={() => setCurrent(index)} />)}</div>

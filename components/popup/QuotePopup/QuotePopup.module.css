@@ -64,7 +64,7 @@
 }
 
 .popHeaderLeft h2 {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-barlow), serif;
   font-size: 1.65rem;
   font-weight: 800;
   color: #fff;
@@ -247,7 +247,7 @@
 }
 
 .popSuccess h3 {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-barlow), serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text);
