@@ -4,6 +4,7 @@ import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
 import Header from '@/components/layout/Header/Header';
 import './globals.css';
 import Footer from '@/components/layout/Footer/Footer';
+import GoogleTestimonials from '@/components/common/GoogleTestimonials/GoogleTestimonials';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <Header />
         {children}
+        <GoogleTestimonials />
         <Footer />
         <MobileSticky />
       </body>

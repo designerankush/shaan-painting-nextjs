@@ -13,7 +13,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
 export default function Process() {
   return (
     <section className={cx('proc-sec')} id="process">
-      <div className={cx('sec-inner')}>
+      <div className={cx('container')}>
         <div style={{ textAlign: 'center' }}><p className={cx('eyebrow')} style={{ justifyContent: 'center' }}>How We Work</p><h2 className={cx('sec-title reveal')}>Our 4-Step Process</h2></div>
         <div className={cx('proc-grid')}>
           <div className={cx('proc-line')}></div>

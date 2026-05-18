@@ -3,10 +3,10 @@ import { IMG } from '@/data/siteData';
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes
-    .flatMap((item) => (item ? item.split(' ') : []))
-    .filter(Boolean)
-    .map((name) => styles[name] ?? name)
-    .join(' ');
+  .flatMap((item) => (item ? item.split(' ') : []))
+  .filter(Boolean)
+  .map((name) => styles[name] ?? name)
+  .join(' ');
 }
 
 
@@ -14,7 +14,12 @@ export default function About() {
   return (
     <section className={cx('about')} id="about">
       <div className={cx('about-grid')}>
-        <div className={cx('about-img')}><img src={IMG.img14} alt="Shaan Painting work" /><div className={cx('about-badge')}><big>DS</big><small>Group Pty Ltd</small></div></div>
+        <div className={cx('about-img')}>
+          <img src={IMG.img14} alt="Shaan Painting work" />
+          <div className={cx('about-logo')}>
+            <img src={IMG.logo} alt="Shaan Painting work" width="200" />
+          </div>
+        </div>
         <div className={cx('about-copy')}>
           <p className={cx('eyebrow')}>About Shaan Painting</p>
           <h2 className={cx('sec-title reveal')}>Craftsmanship You Can See.<br /><span style={{ color: 'var(--blue)', fontStyle: 'italic' }}>Quality That Lasts.</span></h2>

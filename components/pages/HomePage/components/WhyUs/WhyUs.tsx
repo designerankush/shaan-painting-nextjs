@@ -11,7 +11,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
 
 export default function WhyUs() {
   return (
-    <section className={cx('why-sec')} id="why">
+    <section className={cx('why-section')} id="why">
       <div className={cx('why-img')}>
         <img
           src={whyChooseContent.image.src}

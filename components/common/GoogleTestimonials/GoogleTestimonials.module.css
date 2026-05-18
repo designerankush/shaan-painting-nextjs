@@ -1,0 +1,462 @@
+.testi-sec {
+  background: var(--offW);
+  padding:70px 0;
+}
+
+.testi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+.sec-title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.sec-title em {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.testi-gbadge {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 14px 40px rgba(0, 113, 197, 0.08);
+}
+
+.testi-glogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.g-circle,
+.tcard-gicon {
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #4285f4 0deg 90deg,
+    #34a853 90deg 180deg,
+    #fbbc05 180deg 270deg,
+    #ea4335 270deg 360deg
+  );
+  color: #fff;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-circle {
+  width: 36px;
+  height: 36px;
+}
+
+.tcard-gicon {
+  width: 32px;
+  height: 32px;
+}
+
+.g-txt {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.testi-gbadge-divider,
+.tov-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--muted);
+}
+
+.testi-gbadge-stars,
+.tcard-stars,
+.tov-stars {
+  color: #fbbc05;
+  display: flex;
+  gap: 2px;
+  line-height: 1;
+}
+
+.testi-gbadge-score-row {
+  margin-top: 6px;
+}
+
+.testi-gbadge-num {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.testi-gbadge-of {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.testi-gbadge-count {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+.testi-slider-wrap {
+  position: relative;
+}
+
+.testi-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testi-track {
+  display: flex;
+  transition: transform 0.55s ease;
+  will-change: transform;
+}
+
+.tcard {
+  min-width: 0;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.tcard-inner {
+  height: 100%;
+  min-height: 360px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 30px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.tcard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.tcard-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tcard-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatarBlue {
+  background: linear-gradient(135deg, #0071c5, #003d6e);
+}
+
+.avatarGreen {
+  background: linear-gradient(135deg, #34a853, #1a6e3a);
+}
+
+.avatarRed {
+  background: linear-gradient(135deg, #ea4335, #9c1a10);
+}
+
+.avatarYellow {
+  background: linear-gradient(135deg, #fbbc05, #c47d00);
+}
+
+.avatarPurple {
+  background: linear-gradient(135deg, #7b2ff7, #4a0099);
+}
+
+.avatarCyan {
+  background: linear-gradient(135deg, #00bcd4, #006878);
+}
+
+.avatarOrange {
+  background: linear-gradient(135deg, #ff7043, #bf360c);
+}
+
+.avatarTeal {
+  background: linear-gradient(135deg, #26c6da, #00838f);
+}
+
+.avatarPink {
+  background: linear-gradient(135deg, #ec407a, #880e4f);
+}
+
+.tcard-name {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.tcard-date {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.tcard-quote {
+  position: absolute;
+  right: 24px;
+  top: 78px;
+  font-family: var(--font-playfair), serif;
+  font-size: 5rem;
+  color: rgba(0, 113, 197, 0.08);
+  line-height: 1;
+}
+
+.tcard-text {
+  margin-top: 16px;
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.tcard-service {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 24px;
+  padding: 8px 12px;
+  background: var(--blueL);
+  color: var(--blue);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.testi-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.tnav-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tnav-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tnav-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tnav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blueM);
+  border: none;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--blue);
+  opacity: 1;
+}
+
+.testi-overall {
+  margin-top: 44px;
+  border-radius: 10px;
+  background: var(--dark);
+  color: var(--white);
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.tov-left {
+  min-width: 130px;
+}
+
+.tov-label {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.tov-num {
+  font-family: var(--font-playfair), serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin: 4px 0;
+}
+
+.tov-stars {
+  font-size: 0.9rem;
+}
+
+.tov-stat-wrap {
+  display: contents;
+}
+
+.tov-stat {
+  text-align: center;
+}
+
+.tov-stat-n {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.tov-stat-l {
+  margin-top: 4px;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.tov-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: var(--blue);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .testi-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testi-overall {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .tov-divider {
+    display: none;
+  }
+
+  .tov-stat {
+    min-width: 120px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .testi-sec {
+    padding: 40px 0;
+  }
+
+  .testi-gbadge {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tcard {
+    padding: 0;
+  }
+
+  .tcard-inner {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .tcard-text {
+    font-size: 0.92rem;
+  }
+
+  .testi-overall {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tov-cta {
+    width: 100%;
+  }
+}

@@ -32,8 +32,11 @@ body.modalOpen {
   overflow: hidden;
 }
 
-.container { max-width: 1400px; margin: 0 auto;}
-#home, #why, #process {overflow-x: hidden;}
+.container { 
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 20px;
+}
+.hidden-x, #home, #why, #process {overflow-x: hidden;}
 
 @media (max-width: 767px) {
   #why-choose { overflow-x: hidden;}
@@ -44,7 +47,7 @@ body.modalOpen {
 .sec-inner{max-width:1400px;margin:0 auto}
 .eyebrow{display:flex;align-items:center;gap:10px;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
 .eyebrow::before{content:'';display:block;width:22px;height:2px;background:var(--blue);flex-shrink:0}
-h2.sec-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:var(--text);line-height:1.1;margin-bottom:0}
+h2.sec-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:var(--text);line-height:1.1;margin-bottom:0}
 h2.sec-title.wh{color:var(--white);}
 
 /* ── ANIMATIONS ──────────────────────────────── */
@@ -53,38 +56,6 @@ h2.sec-title.wh{color:var(--white);}
 .reveal.vis{opacity:1;transform:none}
 .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}
 
-/* ── RESPONSIVE ──────────────────────────────── */
-@media(max-width:1100px){
-  .about-grid,.why-sec{grid-template-columns:1fr}
-  .about-img,.why-img{min-height:360px;max-height:420px}
-  .about-img::after{display:none}
-  .why-copy{padding:56px 5%}
-  .about-copy{padding:56px 5%}
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .ft-grid{grid-template-columns:1fr 1fr;gap:36px}
-}
-@media(max-width:768px){
-  .nlinks,.ncta{display:none}
-  .hmbg{display:flex}
-  .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
-  .mi.c5,.mi.c7,.mi.c4,.mi.c3,.mi.c8{grid-column:span 1 !important}
-  .mi.r2{grid-row:span 1 !important}
-  .ba-grid,.contact-grid,.proc-grid{grid-template-columns:1fr}
-  .proc-line{display:none}
-  .cf-row{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr;gap:28px}
-  .ft-btm{flex-direction:column;gap:8px;text-align:center}
-  .hstats{display:none}
-  .svc-grid{grid-template-columns:1fr}
-  .cform-box{padding:28px 22px}
-  .pop-body .frow{grid-template-columns:1fr}
-}
-@media(max-width:480px){
-  .mosaic{grid-template-columns:1fr;grid-auto-rows:220px}
-}
-.footer-phone{display:block;font-family: var(--font-barlow), serif;font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:8px;transition:color .2s}
-.footer-phone:hover{color:var(--blueM)}
-.hdot{border:0;padding:0;display:block}
 
 /* Shared CTA buttons */
 .hbtns{display:flex;gap:14px;flex-wrap:wrap;animation:slideUp .8s .7s both}

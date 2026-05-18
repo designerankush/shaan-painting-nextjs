@@ -16,7 +16,7 @@ export default function Gallery({ onOpen }: { onOpen: (src: string) => void }) {
   return (
     <section className={cx('gallery-sec')} id="gallery">
       <div className={cx('sec-inner')}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16 }}>
+        <div className={cx('container')} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16 }}>
           <div><p className={cx('eyebrow')}>Portfolio</p><h2 className={cx('sec-title reveal')}>Recent Projects</h2></div>
           <p style={{ color: 'var(--muted)', fontSize: '.82rem', maxWidth: 220, textAlign: 'right', lineHeight: 1.65 }} className={cx('reveal')}>Click any image to view full size.</p>
         </div>

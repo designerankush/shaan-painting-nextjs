@@ -34,7 +34,7 @@ export const headerContent = {
     { label: 'Gallery', href: '#gallery' },
     { label: 'Process', href: '#process' },
     { label: 'Why Us', href: '#why' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact Us', href: '#contact' },
   ],
 
   cta: {
@@ -81,8 +81,8 @@ export const footerContent = {
         { label: 'Exterior Painting', href: '#services' },
         { label: 'Interior Painting', href: '#services' },
         { label: 'Weatherboard Restore', href: '#services' },
-        { label: 'Doors & Trim', href: '#services' },
-        { label: 'New Construction', href: '#services' },
+        { label: 'New Home Painting', href: '#services' },
+        { label: 'Roof & Timber Painting', href: '#services' },
       ],
     },
     {
@@ -92,6 +92,7 @@ export const footerContent = {
         { label: 'Our Process', href: '#process' },
         { label: 'About Us', href: '#about' },
         { label: 'Contact Us', href: '#contact' },
+        { label: 'Testimonials', href: '#reviews' },
       ],
     },
   ],
@@ -131,8 +132,8 @@ export const mobileStickyContent = {
 };
 
 export const services = [
-  ['01', '🏠', 'Interior House Painting Melbourne', 'Full repaints — weatherboard prep, power wash, prime and topcoat. We restore aged exteriors to pristine condition that lasts.'],
-  ['02', '🛋️', 'Exterior House Painters Melbourne', 'Walls, ceilings, trims and built-ins. We protect your furnishings, fill and sand all defects, and deliver a smooth lasting finish.'],
+  ['01', '🏠', 'Interior House Painting Melbourne', 'Walls, ceilings, trims and built-ins. We protect your furnishings, fill and sand all defects, and deliver a smooth lasting finish.'],
+  ['02', '🛋️', 'Exterior House Painters Melbourne', 'Full repaints — weatherboard prep, power wash, prime and topcoat. We restore aged exteriors to pristine condition that lasts.'],
   ['03', '🖌️', 'Weatherboard Restoration', 'Specialist stripping and repainting of deteriorated weatherboard — full surface repair, prime and premium topcoats applied.'],
   ['04', '🚪', 'New Home Painting', 'Heritage doors, French doors, window frames — stained, painted or varnished to bring timber back to life beautifully.'],
   ['05', '🏗️', 'Commercial Painting Services', 'Working alongside builders on new homes and renovations — on time, on budget, and to exact specification every time.'],
@@ -286,4 +287,74 @@ export const whyChooseContent = {
       title: 'Where Proper Preparation Meets Premium Finishes.',
     },
   ],
+};
+
+export const googleTestimonialsContent = {
+  eyebrow: 'What Customers Say',
+  title: 'Real Google Reviews',
+  highlight: 'From Happy Clients.',
+
+  badge: {
+    source: 'Google',
+    rating: '5.0',
+    outOf: '/ 5.0',
+    count: 'Based on Google Reviews',
+  },
+
+  reviews: [
+    {
+      initial: 'Z',
+      name: 'Zachary Harrion',
+      date: '2 weeks ago',
+      avatarClass: 'avatarBlue',
+      text: 'Fantastic job done by Adam for the whole house! We’ve used Adam a few times now (for family member homes too) and cannot recommend him enough. Thanks again!',
+      service: 'Exterior Painting',
+    },
+    {
+      initial: 'M',
+      name: 'Mike Ward',
+      date: '1 month ago',
+      avatarClass: 'avatarGreen',
+      text: 'Adam and the team did a great job painting our place. They are very experienced at their craft, and completed the work in a timely fashion, showing great attention to detail and very clean. Would strongly recommend.',
+      service: 'Interior Painting',
+    },
+    {
+      initial: 'H',
+      name: 'Henery Mccoy',
+      date: '6 weeks ago',
+      avatarClass: 'avatarRed',
+      text: "We just had the exterior of our house painted by Adam and his team. We are very pleased with the result. Well priced compared to other quotes. The guys turned up on time and left everything clean and tidy. He knows his craft and is great to work with. We will use them again and recommend them highly.",
+      service: 'Weatherboard Restore',
+    },
+    {
+      initial: 'M',
+      name: 'Michael D.',
+      date: '2 months ago',
+      avatarClass: 'avatarYellow',
+      text: 'Got three quotes and Shaan was honest, fair and transparent. Turned up on time every day, kept the site incredibly clean and delivered well ahead of schedule. Finish quality is second to none.',
+      service: 'New Construction',
+    },
+    {
+      initial: 'L',
+      name: 'Linda P.',
+      date: '3 months ago',
+      avatarClass: 'avatarPurple',
+      text: 'Painted our front door and all window trims — what a transformation! So careful and precise. The colour consultation was really helpful. Our neighbours keep asking who did the work!',
+      service: 'Doors & Trim',
+    }, 
+  ],
+
+  overall: {
+    label: 'Google Rating',
+    rating: '5.0',
+    stats: [
+      { value: '100%', label: '5-Star Reviews' },
+      { value: '500+', label: 'Happy Clients' },
+      { value: '10+', label: 'Years Trusted' },
+    ],
+    cta: {
+      label: 'Get Your Free Quote',
+      href: '#contact',
+    },
+  },
 };

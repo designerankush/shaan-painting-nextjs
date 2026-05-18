@@ -39,7 +39,6 @@
     opacity: 0;
     transform: translateY(-24px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -52,6 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--white-color);
 }
 
 .popHeaderLeft p {
@@ -67,14 +67,14 @@
   font-family: var(--font-barlow), serif;
   font-size: 1.65rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--white-color);
   line-height: 1.15;
 }
 
 .popClose {
   background: rgba(255, 255, 255, 0.15);
   border: none;
-  color: #fff;
+  color: var(--white-color);
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -86,24 +86,21 @@
   transition: background 0.2s;
   flex-shrink: 0;
 }
-
 .popClose:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-
 .popQuick {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px 32px 0;
 }
-
 .popPhone {
   display: flex;
   align-items: center;
   gap: 10px;
   background: var(--blue);
-  color: #fff;
+  color: var(--white-color);
   padding: 12px 20px;
   font-weight: 700;
   font-size: 1.1rem;
@@ -113,7 +110,6 @@
   cursor: pointer;
   text-decoration: none;
 }
-
 .popPhone:hover {
   background: var(--blue2);
 }
@@ -131,7 +127,6 @@
   transition: all 0.2s;
   text-decoration: none;
 }
-
 .popEmail:hover {
   background: var(--blueM);
 }
@@ -145,12 +140,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-
 .formGroup {
   margin-bottom: 12px;
 }
-
-.popLabel {
+.formGroup label {
   display: block;
   font-size: 0.62rem;
   font-weight: 700;
@@ -159,7 +152,6 @@
   color: var(--muted);
   margin-bottom: 5px;
 }
-
 .popInput,
 .popSelect,
 .popTextarea {
@@ -179,7 +171,7 @@
 .popTextarea:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(0, 113, 197, 0.1);
-  background: #fff;
+  background: var(--white-color);
 }
 
 .popInput::placeholder,
@@ -191,7 +183,6 @@
   color: var(--muted);
   appearance: none;
 }
-
 .popTextarea {
   resize: none;
   min-height: 80px;
@@ -200,7 +191,7 @@
 .popSubmit {
   width: 100%;
   background: var(--blue);
-  color: #fff;
+  color: var(--white-color);
   border: none;
   padding: 15px;
   font-family: var(--font-inter), sans-serif;
@@ -212,7 +203,6 @@
   transition: background 0.2s;
   margin-top: 4px;
 }
-
 .popSubmit:hover {
   background: var(--blue2);
 }
@@ -230,12 +220,10 @@
   margin-top: 8px;
   transition: all 0.2s;
 }
-
 .popLater:hover {
   border-color: var(--blue);
   color: var(--blue);
 }
-
 .popSuccess {
   display: flex;
   flex-direction: column;
@@ -245,14 +233,12 @@
   text-align: center;
   gap: 14px;
 }
-
 .popSuccess h3 {
   font-family: var(--font-barlow), serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text);
 }
-
 .popSuccess p {
   color: var(--muted);
   font-size: 0.9rem;
@@ -263,34 +249,27 @@
   .modal {
     padding: 8px;
   }
-
   .modalDialog {
     max-width: 100%;
     margin: 8px auto;
     min-height: calc(100vh - 16px);
     align-items: center;
   }
-
   .formRow {
     grid-template-columns: 1fr;
   }
-
   .popHeader {
     padding: 20px;
   }
-
   .popQuick {
     padding: 16px 20px 0;
   }
-
   .popBody {
     padding: 16px 20px 22px;
   }
-
   .popHeaderLeft h2 {
     font-size: 1.3rem;
   }
-
   .popEmail {
     word-break: break-all;
   }

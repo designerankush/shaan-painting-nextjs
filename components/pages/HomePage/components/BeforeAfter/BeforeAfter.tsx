@@ -13,7 +13,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
 export default function BeforeAfter() {
   return (
     <section className={cx('ba-sec')} id="beforeafter">
-      <div className={cx('sec-inner')}>
+      <div className={cx('container')}>
         <p className={cx('eyebrow')}>The Shaan Difference</p>
         <h2 className={cx('sec-title reveal')}>Before & After</h2>
         <div className={cx('ba-grid reveal')} id="baGrid">

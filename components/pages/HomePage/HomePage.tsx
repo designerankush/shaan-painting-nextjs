@@ -69,7 +69,7 @@ export default function HomePage() {
       <Process />
       <WhyChooseUs />
       <WhyUs />
-      <Contact />      
+      <Contact />
       <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
     </>
   );

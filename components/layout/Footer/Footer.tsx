@@ -55,6 +55,13 @@ export default function Footer() {
             </a>
           </div>
 
+               
+          <div className={cx('social-links')}>
+            <a href="https://instagram.com" target="_blank" rel="noopener" className={cx('insta-btn')}>Instagram</a>            
+            <a href="https://linkedin.com" target="_blank" rel="noopener" className={cx('linkedin-btn')}>LinkedIn</a>            
+            <a href="https://facebook.com" target="_blank" rel="noopener" className={cx('fb-btn')} >Facebook</a>
+          </div>
+
           <div className={cx('ft-cta')}>
             <a href={contact.cta.href}>{contact.cta.label}</a>
           </div>

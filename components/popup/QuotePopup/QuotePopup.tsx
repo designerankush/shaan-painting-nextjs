@@ -85,6 +85,11 @@ export default function QuotePopup() {
                 </div>
 
                 <div className={styles.formGroup}>
+                  <label>Address</label>
+                  <textarea className={styles.popTextarea} placeholder="Address" rows={4}></textarea>
+                </div>
+
+                <div className={styles.formGroup}>
                   <label className={styles.popLabel}>Service Needed</label>
                   <select className={styles.popSelect}>
                     <option value="">Select a service…</option>
