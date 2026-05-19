@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <section className={cx('contact-sec')} id="contact">
       <div className={cx('container')}>
-        <div className={cx('container contact-grid')}>
+        <div className={cx('contact-grid')}>
           <div className={cx('cinfo reveal')}>
             <p className={cx('eyebrow')} style={{ color: 'var(--blueM)' }}>Get In Touch</p>
             <h2 className={cx('sec-title wh')}>Request Your<br /><em style={{ color: 'var(--blueM)' }}>Free Quote.</em></h2>

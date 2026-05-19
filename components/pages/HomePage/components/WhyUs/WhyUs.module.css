@@ -30,4 +30,5 @@
 /* ── RESPONSIVE ──────────────────────────────── */
 @media(max-width:1100px){
   .why-copy{padding:56px 5%;}
+  .why-section{grid-template-columns:1fr;}
 }

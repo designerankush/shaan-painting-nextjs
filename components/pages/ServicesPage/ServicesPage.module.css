@@ -134,6 +134,7 @@
 
 .searchStripInner {
   max-width: 1400px;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -289,7 +290,7 @@
 }
 
 .rcBody {
-  padding: 22px 28px;
+  padding: 20px;
 }
 
 .suburbGrid {
@@ -482,6 +483,7 @@
   .ctaRight {
     align-items: flex-start;
   }
+  .suburbChip { padding: 10px;}
 }
 
 @media (max-width: 600px) {

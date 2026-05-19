@@ -31,6 +31,8 @@
 
 @media(max-width:768px){
   .nlinks,.ncta{display:none} 
+  .hmbg {
+        display: flex;
+    }
 }
  
-

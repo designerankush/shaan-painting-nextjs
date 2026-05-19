@@ -1,4 +1,4 @@
-.why-sec{background:var(--offW);padding:100px 0%;position:relative}
+.why-sec{background:var(--offW); padding:100px 0; position:relative}
 .why-sec::before{
     content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,113,197,.06) 0%,transparent 70%);pointer-events:none
 }
@@ -58,7 +58,7 @@
 .wcta-quote:hover{background:rgba(255,255,255,.2);border-color:var(--white)}
 
 @media (max-width: 767px) {
-    .why-sec{padding:50px 20px;}
+    .why-sec{padding:50px 0;}
     .why-header{grid-template-columns:1fr; gap:30px}
     .why-body{grid-template-columns: 1fr;gap:40px;}
     .why-img-wrap{position:static;}

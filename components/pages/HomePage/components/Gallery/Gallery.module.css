@@ -1,6 +1,6 @@
 .gallerySec {
   background: var(--white);
-  padding: 90px 5%;
+  padding: 90px 0%;
 }
 
 .galleryHeader {
@@ -9,7 +9,7 @@
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 }
 
 .eyebrow {

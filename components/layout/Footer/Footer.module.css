@@ -26,10 +26,12 @@
 .linkedin-btn:hover {background-color: #1877f2;}
 
 @media(max-width:1100px){
-  .ft-grid{grid-template-columns:1fr 1fr;gap:36px}  
+  .footer .ft-grid{grid-template-columns:1fr 1fr;gap:36px}  
 }
+
 @media(max-width:768px){
-  .ft-grid{grid-template-columns:1fr;gap:28px}
+  .footer{padding:34px 0 20px}
+  .footer .ft-grid{grid-template-columns:1fr; gap:28px}
   .ft-btm{flex-direction:column; gap:8px; text-align:center}
   .f-column {max-width:100%;}
 }
