@@ -2,17 +2,32 @@
 
 import { useEffect, useState } from 'react';
 import styles from './QuotePopup.module.css';
+import { quoteFormContent } from '@/data/siteData';
+
+type FormValue = string;
 
 export default function QuotePopup() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState<Record<string, FormValue>>({});
 
   const closePopup = () => {
-     console.log('Popup close clicked');
     setIsOpen(false);
   };
 
+  const handleChange = (
+    name: string,
+    value: string
+  ) => {
+    setFormData((current) => ({
+      ...current,
+      [name]: value,
+    }));
+  };
+
   const submitPopup = () => {
+    console.log('Quote form data:', formData);
+
     setIsSuccess(true);
 
     setTimeout(() => {
@@ -35,14 +50,19 @@ export default function QuotePopup() {
 
   if (!isOpen) return null;
 
+  const { header, quickContact, fields, buttons, success } = quoteFormContent;
+
+  const firstRowFields = fields.filter((field) => field.half);
+  const normalFields = fields.filter((field) => !field.half);
+
   return (
     <div className={styles.modal}>
       <div className={styles.modalDialog}>
         <div className={styles.modalContent}>
           <div className={styles.popHeader}>
             <div className={styles.popHeaderLeft}>
-              <p>Free On-Site Visit — No Obligation</p>
-              <h2>Request Your Free Quote</h2>
+              <p>{header.eyebrow}</p>
+              <h2>{header.title}</h2>
             </div>
 
             <button
@@ -56,12 +76,12 @@ export default function QuotePopup() {
           </div>
 
           <div className={styles.popQuick}>
-            <a href="tel:0451644200" className={styles.popPhone}>
-              0451 644 200
+            <a href={quickContact.phone.href} className={styles.popPhone}>
+              {quickContact.phone.label}
             </a>
 
-            <a href="mailto:Shaanpainting3978@gmail.com" className={styles.popEmail}>
-              Shaanpainting3978@gmail.com
+            <a href={quickContact.email.href} className={styles.popEmail}>
+              {quickContact.email.label}
             </a>
           </div>
 
@@ -69,65 +89,93 @@ export default function QuotePopup() {
             {!isSuccess ? (
               <>
                 <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label className={styles.popLabel}>First Name *</label>
-                    <input className={styles.popInput} type="text" placeholder="John" />
+                  {firstRowFields.map((field) => (
+                    <div className={styles.formGroup} key={field.name}>
+                      <label className={styles.popLabel}>{field.label}</label>
+
+                      <input
+                        className={styles.popInput}
+                        type={field.type}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        required={field.required}
+                        value={formData[field.name] || ''}
+                        onChange={(event) =>
+                          handleChange(field.name, event.target.value)
+                        }
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {normalFields.map((field) => (
+                  <div className={styles.formGroup} key={field.name}>
+                    <label className={styles.popLabel}>{field.label}</label>
+
+                    {field.type === 'select' ? (
+                      <select
+                        className={styles.popSelect}
+                        name={field.name}
+                        value={formData[field.name] || ''}
+                        onChange={(event) =>
+                          handleChange(field.name, event.target.value)
+                        }
+                      >
+                        <option value="">{field.placeholder}</option>
+
+                        {field.options?.map((option) => (
+                          <option value={option} key={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    ) : field.type === 'textarea' ? (
+                      <textarea
+                        className={styles.popTextarea}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        rows={field.rows || 3}
+                        value={formData[field.name] || ''}
+                        onChange={(event) =>
+                          handleChange(field.name, event.target.value)
+                        }
+                      />
+                    ) : (
+                      <input
+                        className={styles.popInput}
+                        type={field.type}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        required={field.required}
+                        value={formData[field.name] || ''}
+                        onChange={(event) =>
+                          handleChange(field.name, event.target.value)
+                        }
+                      />
+                    )}
                   </div>
+                ))}
 
-                  <div className={styles.formGroup}>
-                    <label className={styles.popLabel}>Last Name</label>
-                    <input className={styles.popInput} type="text" placeholder="Smith" />
-                  </div>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.popLabel}>Phone Number *</label>
-                  <input className={styles.popInput} type="tel" placeholder="04XX XXX XXX" />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.popLabel}>Service Needed</label>
-                  <select className={styles.popSelect}>
-                    <option value="">Select a service…</option>
-                    <option>Exterior Painting</option>
-                    <option>Interior Painting</option>
-                    <option>Weatherboard Restoration</option>
-                    <option>Doors & Trim</option>
-                    <option>New Construction</option>
-                    <option>Porch / Deck</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label>Address</label>
-                  <textarea className={styles.popTextarea} placeholder="Address" rows={4}></textarea>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.popLabel}>Project Details optional</label>
-                  <textarea
-                    className={styles.popTextarea}
-                    placeholder="Briefly describe your property…"
-                    rows={3}
-                  />
-                </div>
-
-                <button type="button" className={styles.popSubmit} onClick={submitPopup}>
-                  Send Quote Request →
+                <button
+                  type="button"
+                  className={styles.popSubmit}
+                  onClick={submitPopup}
+                >
+                  {buttons.submit}
                 </button>
 
-                <button type="button" className={styles.popLater} onClick={closePopup}>
-                  Maybe Later — I&apos;ll explore the site first
+                <button
+                  type="button"
+                  className={styles.popLater}
+                  onClick={closePopup}
+                >
+                  {buttons.later}
                 </button>
               </>
             ) : (
               <div className={styles.popSuccess}>
-                <h3>Quote Request Sent!</h3>
-                <p>
-                  Thank you! We&apos;ll be in touch within 24 hours with your detailed,
-                  no-obligation quote.
-                </p>
+                <h3>{success.title}</h3>
+                <p>{success.text}</p>
               </div>
             )}
           </div>

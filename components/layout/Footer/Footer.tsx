@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={cx('ft-btm')}>
+      <div className={cx('ft-btm container')}>
         <span>{bottom.copyright}</span>
         <span>{bottom.note}</span>
       </div>

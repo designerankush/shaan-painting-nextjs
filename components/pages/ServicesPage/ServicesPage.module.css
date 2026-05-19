@@ -1,0 +1,500 @@
+.hero {
+  position: relative;
+  min-height: 560px;
+  background: linear-gradient(125deg, var(--dark) 0%, var(--dark2) 45%, #0a2a5e 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 110px 5% 100px;
+}
+
+.heroBgGlow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 113, 197, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.heroGridLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.heroEyebrowLine {
+  width: 28px;
+  height: 2px;
+  background: var(--blueM);
+}
+
+.heroEyebrowText {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blueM);
+}
+
+.hero h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.hero h1 em {
+  color: var(--blueM);
+  font-style: italic;
+}
+
+.heroDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hstat {
+  padding: 16px 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-right: none;
+}
+
+.hstat:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.hstat:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 0 10px 10px 0;
+}
+
+.hstatN {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+
+.hstatL {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.searchStrip {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 5%;
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 113, 197, 0.05);
+}
+
+.searchStripInner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  border: 2px solid var(--blueM);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 2px 16px rgba(0, 113, 197, 0.08);
+}
+
+.searchBox input {
+  flex: 1;
+  padding: 13px 18px;
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: transparent;
+}
+
+.searchIcon {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+}
+
+.searchIcon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.searchResultsTxt {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.searchResultsTxt strong {
+  color: var(--blue);
+}
+
+.regionJumpPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rjp {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--white);
+}
+
+.rjp:hover,
+.active {
+  border-color: var(--blue);
+  color: var(--white);
+  background: var(--blue);
+}
+
+.areasMain {
+  background: var(--offW);
+  padding: 52px 5% 80px;
+}
+
+.areasInner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.regionCard {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 180px;
+}
+
+.rcHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 28px;
+  background: linear-gradient(to right, var(--blueL), var(--white));
+  border-bottom: 1.5px solid var(--border);
+}
+
+.rcIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--blueM);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.rcInfo {
+  flex: 1;
+}
+
+.rcTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.rcDesc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.rcBadge {
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+
+.rcBody {
+  padding: 22px 28px;
+}
+
+.suburbGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.suburbChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--offW);
+}
+
+.suburbDot {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 2px rgba(0, 113, 197, 0.15);
+}
+
+.suburbName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.noResults {
+  text-align: center;
+  padding: 64px 20px;
+}
+
+.noResults svg {
+  width: 56px;
+  height: 56px;
+  stroke: var(--blueM);
+  fill: none;
+  stroke-width: 1.5;
+  margin: 0 auto 16px;
+}
+
+.noResults h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.noResults p {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.ctaSection {
+  padding: 0 5% 80px;
+  background: var(--offW);
+}
+
+.ctaCard {
+  max-width: 1300px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 60%, var(--blue3) 100%);
+  border-radius: 22px;
+  padding: 56px 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+  box-shadow: 0 20px 64px rgba(0, 113, 197, 0.28);
+}
+
+.ctaTag {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+
+.ctaLeft h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.ctaLeft p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
+  max-width: 500px;
+}
+
+.ctaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.ctaPhoneNum {
+  font-family: var(--font-playfair), serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.ctaPhoneLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: -10px;
+}
+
+.ctaBtnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.ctaBtnPrimary,
+.ctaBtnSecondary {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ctaBtnPrimary {
+  background: var(--white);
+  color: var(--blue);
+  border: none;
+}
+
+.ctaBtnSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .suburbGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .suburbGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .searchStrip {
+    top: 68px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 92px 5% 80px;
+    min-height: auto;
+  }
+
+  .ctaCard {
+    grid-template-columns: 1fr;
+    padding: 36px 28px;
+    gap: 28px;
+  }
+
+  .ctaRight {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .suburbGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rcHeader {
+    align-items: flex-start;
+  }
+
+  .rcMeta {
+    display: none;
+  }
+
+  .hstat {
+    flex: 1;
+    padding: 14px 12px;
+  }
+}

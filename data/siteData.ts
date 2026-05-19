@@ -44,11 +44,11 @@ export const headerContent = {
 };
 
 export const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#process', label: 'Process' },
-  { href: '#why', label: 'Why Us' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/#gallery', label: 'Gallery' },
+  { href: '/#process', label: 'Process' },
+  { href: '/#why', label: 'Why Us' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export const heroSlides = [
@@ -88,11 +88,11 @@ export const footerContent = {
     {
       title: 'Company',
       links: [
-        { label: 'Our Work', href: '#gallery' },
-        { label: 'Our Process', href: '#process' },
-        { label: 'About Us', href: '#about' },
-        { label: 'Contact Us', href: '#contact' },
-        { label: 'Testimonials', href: '#reviews' },
+        { label: 'Our Work', href: '/#gallery' },
+        { label: 'Our Process', href: '/#process' },
+        { label: 'About Us', href: '/#about' },
+        { label: 'Contact Us', href: '/#contact' },
+        { label: 'Testimonials', href: '/#reviews' },
       ],
     },
   ],
@@ -355,6 +355,229 @@ export const googleTestimonialsContent = {
     cta: {
       label: 'Get Your Free Quote',
       href: '#contact',
+    },
+  },
+};
+
+
+export const quoteFormContent = {
+  header: {
+    eyebrow: 'Free On-Site Visit — No Obligation',
+    title: 'Request Your Free Quote',
+  },
+
+  quickContact: {
+    phone: {
+      label: '0451 644 200',
+      href: 'tel:0451644200',
+    },
+    email: {
+      label: 'Shaanpainting3978@gmail.com',
+      href: 'mailto:Shaanpainting3978@gmail.com',
+    },
+  },
+
+  fields: [
+    {
+      type: 'text',
+      name: 'firstName',
+      label: 'First Name *',
+      placeholder: 'John',
+      required: true,
+      half: true,
+    },
+    {
+      type: 'text',
+      name: 'lastName',
+      label: 'Last Name',
+      placeholder: 'Smith',
+      required: false,
+      half: true,
+    },
+    {
+      type: 'tel',
+      name: 'phone',
+      label: 'Phone Number *',
+      placeholder: '04XX XXX XXX',
+      half: true,
+      required: true,
+    },
+    {
+      type: 'text',
+      name: 'suburb',
+      label: 'Suburb',
+      placeholder: 'Suburb',
+      required: false,
+      half: true,
+    },
+    {
+      type: 'select',
+      name: 'service',
+      label: 'Service Needed',
+      placeholder: 'Select a service…',
+      options: [
+        'Exterior Painting',
+        'Interior Painting',
+        'Weatherboard Restoration',
+        'Doors & Trim',
+        'New Construction',
+        'Porch / Deck',
+        'Other',
+      ],
+    },
+    {
+      type: 'textarea',
+      name: 'address',
+      label: 'Address',
+      placeholder: 'Address',
+      rows: 4,
+    },
+    {
+      type: 'textarea',
+      name: 'projectDetails',
+      label: 'Project Details optional',
+      placeholder: 'Briefly describe your property…',
+      rows: 3,
+    },
+  ],
+
+  buttons: {
+    submit: 'Send Quote Request →',
+    later: "Maybe Later — I'll explore the site first",
+  },
+
+  success: {
+    title: 'Quote Request Sent!',
+    text: "Thank you! We'll be in touch within 24 hours with your detailed, no-obligation quote.",
+  },
+};
+
+
+// Services Page
+export const servicesPageContent = {
+  hero: {
+    eyebrow: 'Our Services',
+    title: 'Professional Painting',
+    highlight: 'Services.',
+    description:
+      'Shaan Painting DS Group provides premium residential painting services across Melbourne and regional Victoria with honest quotes, expert preparation and flawless finishes.',
+    stats: [
+      { value: '500+', label: 'Projects Done' },
+      { value: '10+', label: 'Years Exp.' },
+      { value: '100%', label: 'Satisfaction' },
+    ],
+  },
+
+  search: {
+    placeholder: 'Search service or area...',
+  },
+
+  regions: [
+    {
+      id: 'exterior_painting',
+      icon: '🏠',
+      title: 'Exterior Painting',
+      description: 'Premium exterior repainting for homes, weatherboards and outdoor surfaces.',
+      suburbs: [
+        'Full Exterior Repaints',
+        'Weatherboard Painting',
+        'Render Painting',
+        'Fence Painting',
+        'Garage Painting',
+        'Exterior Surface Preparation',
+        'Power Washing',
+        'Primer & Topcoat',
+      ],
+    },
+    {
+      id: 'interior_painting',
+      icon: '🛋️',
+      title: 'Interior Painting',
+      description: 'Clean, smooth and professional finishes for every room in your home.',
+      suburbs: [
+        'Walls Painting',
+        'Ceiling Painting',
+        'Bedroom Painting',
+        'Living Room Painting',
+        'Kitchen Painting',
+        'Bathroom Painting',
+        'Feature Walls',
+        'Touch Ups',
+      ],
+    },
+    {
+      id: 'weatherboard_restoration',
+      icon: '🪵',
+      title: 'Weatherboard Restoration',
+      description: 'Specialist restoration for old, peeling and damaged weatherboard homes.',
+      suburbs: [
+        'Peeling Paint Removal',
+        'Sanding',
+        'Gap Filling',
+        'Timber Repair',
+        'Weatherboard Priming',
+        'Premium Topcoats',
+        'Long Lasting Protection',
+      ],
+    },
+    {
+      id: 'doors_and_trim',
+      icon: '🚪',
+      title: 'Doors & Trim',
+      description: 'Detailed painting for doors, trims, windows, skirting and timber features.',
+      suburbs: [
+        'Front Doors',
+        'French Doors',
+        'Window Frames',
+        'Skirting Boards',
+        'Architraves',
+        'Timber Trims',
+        'Varnish & Stain',
+      ],
+    },
+    {
+      id: 'new_construction',
+      icon: '🏗️',
+      title: 'New Construction Painting',
+      description: 'Reliable painting support for new homes, renovations and builder projects.',
+      suburbs: [
+        'New Homes',
+        'Renovations',
+        'Builder Projects',
+        'Final Finish Painting',
+        'Internal & External Painting',
+        'Defect Touch Ups',
+      ],
+    },
+    {
+      id: 'porch_deck_floor',
+      icon: '🎨',
+      title: 'Porch, Deck & Floor Painting',
+      description: 'Durable finishes for outdoor floors, decks, verandahs and porch areas.',
+      suburbs: [
+        'Deck Painting',
+        'Porch Painting',
+        'Verandah Floors',
+        'Outdoor Timber Coating',
+        'Anti-Slip Coatings',
+        'Deck Staining',
+      ],
+    },
+  ],
+
+  cta: {
+    tag: 'Free On-Site Quote',
+    title: 'Need professional painters?',
+    description:
+      'Call Shaan Painting DS Group today for a free, no-obligation painting quote tailored to your home.',
+    phone: {
+      label: '0451 644 200',
+      href: 'tel:0451644200',
+    },
+    quoteButton: 'Request Free Quote',
+    secondaryButton: {
+      label: 'Back to Home',
+      href: '/',
     },
   },
 };
