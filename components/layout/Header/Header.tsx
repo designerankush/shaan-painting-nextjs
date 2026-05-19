@@ -207,7 +207,7 @@ export default function Header() {
 
         <li>
           <a href={cta.href} className={cx('m-cta')}>
-            <PhoneIcon className={cx('phoneIcon')} />
+            <PhoneIcon />
             <span>{cta.label}</span>
           </a>
         </li>
