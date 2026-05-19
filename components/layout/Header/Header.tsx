@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { headerContent } from '@/data/siteData';
 import {PhoneIcon} from '@/components/common/Icons/icons';
 import styles from './Header.module.css';
@@ -13,40 +14,129 @@ function cx(...classes: Array<string | false | null | undefined>) {
     .join(' ');
 }
 
-function scrollToSection(
-  event: React.MouseEvent<HTMLAnchorElement>,
-  href: string
-) {
-  if (!href.startsWith('#')) return;
-
-  event.preventDefault();
-
-  const section = document.querySelector(href);
-
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+function getHashFromHref(href: string) {
+  if (href.includes('#')) {
+    return href.split('#')[1];
   }
+
+  return '';
 }
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('');
 
   const { logo, brand, navLinks, cta } = headerContent;
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      const sections = navLinks
+        .map((link) => getHashFromHref(link.href))
+        .filter(Boolean);
+
+      let currentHash = '';
+
+      sections.forEach((sectionId) => {
+        const section = document.getElementById(sectionId);
+
+        if (!section) return;
+
+        const sectionTop = section.offsetTop - 130;
+
+        if (window.scrollY >= sectionTop) {
+          currentHash = sectionId;
+        }
+      });
+
+      setActiveHash(currentHash);
     };
 
     onScroll();
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('hashchange', onScroll);
 
     return () => {
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('hashchange', onScroll);
     };
-  }, []);
+  }, [navLinks]);
+
+  const scrollToSection = (sectionId: string) => {
+    const target = document.getElementById(sectionId);
+
+    if (!target) return;
+
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+
+    window.history.replaceState(null, '', `/#${sectionId}`);
+    setActiveHash(sectionId);
+  };
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    setMenuOpen(false);
+
+    if (href.startsWith('tel:') || href.startsWith('mailto:')) {
+      return;
+    }
+
+    const hash = getHashFromHref(href);
+
+    if (!hash) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (pathname === '/') {
+      scrollToSection(hash);
+      return;
+    }
+
+    router.push(`/#${hash}`);
+  };
+
+  useEffect(() => {
+    if (pathname !== '/') return;
+
+    const hash = window.location.hash.replace('#', '');
+
+    if (!hash) return;
+
+    setTimeout(() => {
+      scrollToSection(hash);
+    }, 250);
+  }, [pathname]);
+
+  const isActiveLink = (href: string) => {
+    const hash = getHashFromHref(href);
+
+    if (href === '/' && pathname === '/' && !activeHash) {
+      return true;
+    }
+
+    if (href === pathname) {
+      return true;
+    }
+
+    if (pathname === '/' && hash && activeHash === hash) {
+      return true;
+    }
+
+    return false;
+  };
 
   return (
     <>
@@ -54,14 +144,9 @@ export default function Header() {
         <a
           href={logo.href}
           className={cx('nlogo')}
-          onClick={(event) => scrollToSection(event, logo.href)}
+          onClick={(event) => handleNavClick(event, logo.href)}
         >
-          <img
-            className={cx('nlogo-img')}
-            src={logo.src}
-            alt={logo.alt}
-            width={300}
-          />
+          <img className={cx('nlogo-img')} src={logo.src} alt={logo.alt} />
 
           <div className={cx('nlogo-text')}>
             <strong>{brand.title}</strong>
@@ -75,7 +160,8 @@ export default function Header() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={(event) => scrollToSection(event, link.href)}
+                  className={cx(isActiveLink(link.href) && 'active')}
+                  onClick={(event) => handleNavClick(event, link.href)}
                 >
                   {link.label}
                 </a>
@@ -85,12 +171,12 @@ export default function Header() {
         </nav>
 
         <a href={cta.href} className={cx('ncta')}>
-          <PhoneIcon />
+          <PhoneIcon className={cx('phoneIcon')} />
           <span>{cta.label}</span>
         </a>
 
         <button
-          className={cx('hmbg', menuOpen && 'active')}
+          className={cx('hmbg', menuOpen && 'activeMenu')}
           type="button"
           onClick={() => setMenuOpen((value) => !value)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -111,10 +197,8 @@ export default function Header() {
           <li key={link.href}>
             <a
               href={link.href}
-              onClick={(event) => {
-                scrollToSection(event, link.href);
-                setMenuOpen(false);
-              }}
+              className={cx(isActiveLink(link.href) && 'active')}
+              onClick={(event) => handleNavClick(event, link.href)}
             >
               {link.label}
             </a>
@@ -123,8 +207,8 @@ export default function Header() {
 
         <li>
           <a href={cta.href} className={cx('m-cta')}>
-            <PhoneIcon />
-            {cta.label}
+            <PhoneIcon className={cx('phoneIcon')} />
+            <span>{cta.label}</span>
           </a>
         </li>
       </ul>

@@ -15,8 +15,8 @@
 .nav.scrolled .nlogo-text strong{font-size:1.1rem}
 .nlinks{list-style:none;display:flex;gap:28px}
 .nlinks a{color:var(--text);font-size:.82rem;font-weight:600;letter-spacing:.04em;transition:color .2s;position:relative}
-.nlinks a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--blue);transition:width .3s}
-.nlinks a:hover{color:var(--blue)}.nlinks a:hover::after{width:100%}
+.nlinks a::after, .nlinks a.active::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--blue);transition:width .3s}
+.nlinks a:hover, .nlinks a.active{color:var(--blue)}.nlinks a:hover::after{width:100%}
 .ncta{background:var(--blue);color:var(--white);padding:11px 24px;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--blue);transition:all .25s;text-decoration:none;white-space:nowrap}
 .ncta:hover{background:var(--white);color:var(--blue)}
 .ncta svg { vertical-align: middle; width: 22px; margin-right: 5px;}

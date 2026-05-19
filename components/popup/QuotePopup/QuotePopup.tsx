@@ -7,7 +7,7 @@ import { quoteFormContent } from '@/data/siteData';
 type FormValue = string;
 
 export default function QuotePopup() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState<Record<string, FormValue>>({});
 

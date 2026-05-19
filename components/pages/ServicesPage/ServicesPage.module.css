@@ -1,11 +1,12 @@
 .hero {
   position: relative;
-  min-height: 560px;
+  min-height: 550px;
   background: linear-gradient(125deg, var(--dark) 0%, var(--dark2) 45%, #0a2a5e 100%);
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 110px 5% 100px;
+  justify-content: center;
+  padding: 120px 0 70px;
 }
 
 .heroBgGlow {
@@ -32,7 +33,8 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  max-width: 650px;
+  text-align: center;
+  max-width: 750px;
 }
 
 .heroEyebrow {
@@ -75,13 +77,15 @@
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.8;
-  max-width: 520px;
+  max-width: 100%;
   margin-bottom: 36px;
 }
 
 .heroStats {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .hstat {
@@ -121,15 +125,15 @@
 .searchStrip {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 28px 5%;
+  padding: 28px 0%;
   position: sticky;
-  top: 80px;
+  top: 60px;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0, 113, 197, 0.05);
 }
 
 .searchStripInner {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -213,11 +217,11 @@
 
 .areasMain {
   background: var(--offW);
-  padding: 52px 5% 80px;
+  padding: 52px 20px 80px;
 }
 
 .areasInner {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -354,7 +358,7 @@
 }
 
 .ctaCard {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 60%, var(--blue3) 100%);
   border-radius: 22px;

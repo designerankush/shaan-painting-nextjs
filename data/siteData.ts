@@ -21,7 +21,7 @@ export const headerContent = {
   logo: {
     src: IMG.logo,
     alt: 'Shaan Painting DS Group',
-    href: '#home',
+    href: '/',
   },
 
   brand: {
@@ -30,11 +30,12 @@ export const headerContent = {
   },
 
   navLinks: [
-    { label: 'Services', href: '#services' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Process', href: '#process' },
-    { label: 'Why Us', href: '#why' },
-    { label: 'Contact Us', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Gallery', href: '/#gallery' },
+    { label: 'Process', href: '/#process' },
+    { label: 'Why Choose Us', href: '/#why-choose' },
+    { label: 'Contact Us', href: '/#contact' },
   ],
 
   cta: {
@@ -44,10 +45,11 @@ export const headerContent = {
 };
 
 export const navLinks = [
+  { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/#gallery', label: 'Gallery' },
   { href: '/#process', label: 'Process' },
-  { href: '/#why', label: 'Why Us' },
+  { href: '/#why-choose', label: 'Why Us' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -78,11 +80,11 @@ export const footerContent = {
     {
       title: 'Services',
       links: [
-        { label: 'Exterior Painting', href: '#services' },
-        { label: 'Interior Painting', href: '#services' },
-        { label: 'Weatherboard Restore', href: '#services' },
-        { label: 'New Home Painting', href: '#services' },
-        { label: 'Roof & Timber Painting', href: '#services' },
+        { label: 'Exterior Painting', href: '/#services' },
+        { label: 'Interior Painting', href: '/#services' },
+        { label: 'Weatherboard Restore', href: '/#services' },
+        { label: 'New Home Painting', href: '/#services' },
+        { label: 'Roof & Timber Painting', href: '/#services' },
       ],
     },
     {

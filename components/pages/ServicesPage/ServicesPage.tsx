@@ -78,7 +78,7 @@ export default function AreasPage() {
             <span className={styles.heroEyebrowText}>{hero.eyebrow}</span>
           </div>
 
-          <h1>
+          <h1 className="h1">
             {hero.title}
             <br />
             <em>{hero.highlight}</em>
