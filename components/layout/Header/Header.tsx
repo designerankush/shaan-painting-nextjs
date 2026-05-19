@@ -171,7 +171,7 @@ export default function Header() {
         </nav>
 
         <a href={cta.href} className={cx('ncta')}>
-          <PhoneIcon className={cx('phoneIcon')} />
+          <PhoneIcon />
           <span>{cta.label}</span>
         </a>
 
