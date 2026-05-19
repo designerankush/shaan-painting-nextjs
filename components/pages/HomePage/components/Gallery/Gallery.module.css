@@ -1,6 +1,6 @@
 .gallerySec {
   background: var(--white);
-  padding: 90px 0%;
+  padding: 90px 0;
 }
 
 .galleryHeader {
@@ -139,16 +139,15 @@
 
 @media (max-width: 768px) {
   .gallerySec {
-    padding: 70px 5%;
+    padding-block: 40px;
   }
-
   .galleryHeader {
     align-items: flex-start;
   }
-
   .galleryHint {
     text-align: left;
   }
+  .loadMoreWrap { margin-top: 20px;}
 }
 
 @media (max-width: 640px) {

@@ -13,5 +13,6 @@
 
 
 @media(max-width:768px){
+  .ba-sec{padding:40px 0;}
   .ba-grid {grid-template-columns:1fr; margin-block:34px;}
 }

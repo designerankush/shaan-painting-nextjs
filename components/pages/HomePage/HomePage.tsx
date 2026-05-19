@@ -16,6 +16,7 @@ import Ticker from './components/Ticker/Ticker';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import WhyUs from './components/WhyUs/WhyUs';
 import GoogleReviewStrip from './components/GoogleReviewStrip/GoogleReviewStrip';
+import AreasWeService from './components/AreasWeService/AreasWeService';
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes
@@ -64,6 +65,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Gallery onOpen={setLightboxSrc} />
+      <AreasWeService />
       <BeforeAfter />
       <Process />
       <WhyChooseUs />

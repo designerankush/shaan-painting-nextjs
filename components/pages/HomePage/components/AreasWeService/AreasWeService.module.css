@@ -1,0 +1,78 @@
+.areasSec{background:#0d1117;padding:64px 5%}
+.areasInner{max-width:1300px;margin:0 auto}
+.areasTop{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px}
+.areasTop h2{font-size:clamp(2rem, 4vw, 3.2rem);font-weight:700;color:var(--white);margin-bottom:6px}
+.areasTop p{font-size:.82rem;color:rgba(255,255,255,.4);max-width:480px;line-height:1.65}
+.areasTopRight{display:flex;gap:10px;align-items:center;flex-shrink:0;flex-wrap:wrap}
+.areasSearchbox{
+  display:flex;align-items:center;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;transition:border-color .2s;overflow:hidden;
+}
+.areasSearchbox:focus-within{border-color:var(--blue)}
+.areasSearchbox svg{width:15px;height:15px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:2;margin:0 10px;flex-shrink:0}
+.areasSearchbox input{background:none;border:none;outline:none;color:var(--white);font-size:.8rem;padding:9px 12px 9px 0;width:160px}
+.areasSearchbox input::placeholder{color:rgba(255,255,255,.3)}
+.areasSbtn{background:var(--blue);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:6px;text-decoration:none;transition:background .2s; white-space:nowrap;border:none;cursor:pointer}
+.areasSbtn span { margin-right: 5px; vertical-align: middle;}
+.areasSbtn:hover{background:var(--blue2)}
+
+/* Grid of region blocks — 2 columns */
+.areasGrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06)}
+.areaBlock{background:#0d1117;padding:22px 24px;transition:background .2s}
+.areaBlock:hover{background:#111827}
+.areaBlockHead{width: 100%; display:flex;align-items:center;justify-content: space-between;margin-bottom:14px; background-color: inherit; border: 0;}
+.areaBlockName{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:700;color:var(--white)}
+.areaBlockIco{font-size:1rem}
+.areaBlockBadge{font-size:.55rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(34,197,94,.8);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);padding:2px 8px;border-radius:100px}
+
+/* Suburbs — 3 column inline list */
+.areaSubs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px 0}
+.areaSub{display:flex;align-items:center;gap:7px;padding:6px 6px;font-size:.8rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:4px;transition:all .18s;cursor:default}
+.areaSub:hover{color:var(--white);background:rgba(255,255,255,.04)}
+.areaSubDot{width:6px;height:6px;min-width:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 4px rgba(34,197,94,.5);flex-shrink:0}
+.areaSub.hs{display:none}
+
+/* Bottom strip */
+.areasFoot{margin-top:1px;background:rgba(0,113,197,.1);border:1px solid rgba(0,113,197,.2);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.areasFoot p{font-size:.8rem;color:rgba(255,255,255,.45)}
+.areasFoot strong{color:var(--white)}
+.areasFoot a{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blueM);text-decoration:none;transition:color .2s;white-space:nowrap}
+.areasFoot a:hover{color:var(--white)}
+
+/* Accordion chevron — hidden on desktop */
+.areaBlockChevron{display:none;width:18px;height:18px;stroke:rgba(255,255,255,.4);fill:none;stroke-width:2.5;flex-shrink:0;transition:transform .3s,stroke .2s}
+.areaBlock.open .areaBlockChevron{transform:rotate(180deg);stroke:var(--blue)}
+
+@media(max-width:768px){
+  /* Switch to single column accordion */
+  .areasGrid{grid-template-columns:1fr;gap:1px}
+
+  /* Make header clickable */
+  .areaBlock{padding:0;cursor:pointer}
+  .areaBlockHead{
+    padding:12px 0; margin-bottom:0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+    cursor:pointer;user-select:none;
+  }
+  .areaBlock.open .areaBlockHead{border-bottom-color:rgba(0,113,197,.3)}
+
+  /* Show chevron on mobile */
+  .areaBlockChevron{display:block}
+
+  /* Hide suburbs by default, show when open */
+  .areaSubs{
+    display:none;
+    grid-template-columns:repeat(2,1fr);
+    padding:12px 18px 16px;
+    gap:0;
+  }
+  .areaBlock.open .areaSubs{display:grid}
+
+  /* Animate open */
+  .areaBlock.open{background:#111827}
+}
+
+@media(max-width:480px){
+  .areasSearchbox input{width:110px}
+}
