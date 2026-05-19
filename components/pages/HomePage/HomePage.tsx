@@ -57,8 +57,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <Cursor />
-      <Popup />
+      <Cursor /> 
       <Hero />
       <GoogleReviewStrip />
       <Ticker />

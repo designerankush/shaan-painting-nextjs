@@ -1,6 +1,6 @@
 /* ── PROCESS ─────────────────────────────────── */
 .proc-sec{background:var(--light);padding:90px 0%;}
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1300px;margin:60px auto 0;position:relative}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:60px auto 0;position:relative}
 .proc-line{position:absolute;top:44px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(to right,var(--blue) 0%,rgba(0,113,197,.15) 100%)}
 .proc-item{text-align:center;padding:0 24px;position:relative;z-index:1}
 .proc-circle{width:88px;height:88px;border-radius:50%;background:white;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:0 8px 24px rgba(0,113,197,.15);transition:all .3s}
@@ -12,4 +12,5 @@
 
 @media(max-width:768px){
   .proc-line{display:none}
+  .proc-grid{grid-template-columns:1fr; margin-block: 35px 0;}
 }

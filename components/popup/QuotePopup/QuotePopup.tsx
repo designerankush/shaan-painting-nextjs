@@ -4,10 +4,11 @@ import { useEffect, useState } from 'react';
 import styles from './QuotePopup.module.css';
 
 export default function QuotePopup() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const closePopup = () => {
+     console.log('Popup close clicked');
     setIsOpen(false);
   };
 
@@ -85,11 +86,6 @@ export default function QuotePopup() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label>Address</label>
-                  <textarea className={styles.popTextarea} placeholder="Address" rows={4}></textarea>
-                </div>
-
-                <div className={styles.formGroup}>
                   <label className={styles.popLabel}>Service Needed</label>
                   <select className={styles.popSelect}>
                     <option value="">Select a service…</option>
@@ -101,6 +97,11 @@ export default function QuotePopup() {
                     <option>Porch / Deck</option>
                     <option>Other</option>
                   </select>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>Address</label>
+                  <textarea className={styles.popTextarea} placeholder="Address" rows={4}></textarea>
                 </div>
 
                 <div className={styles.formGroup}>

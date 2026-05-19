@@ -51,7 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--white-color);
+  color: var(--white);
 }
 
 .popHeaderLeft p {
@@ -67,14 +67,14 @@
   font-family: var(--font-barlow), serif;
   font-size: 1.65rem;
   font-weight: 800;
-  color: var(--white-color);
+  color: var(--white);
   line-height: 1.15;
 }
 
 .popClose {
   background: rgba(255, 255, 255, 0.15);
   border: none;
-  color: var(--white-color);
+  color: var(--white);
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -100,7 +100,7 @@
   align-items: center;
   gap: 10px;
   background: var(--blue);
-  color: var(--white-color);
+  color: var(--white);
   padding: 12px 20px;
   font-weight: 700;
   font-size: 1.1rem;
@@ -171,7 +171,7 @@
 .popTextarea:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(0, 113, 197, 0.1);
-  background: var(--white-color);
+  background: var(--white);
 }
 
 .popInput::placeholder,
@@ -191,7 +191,7 @@
 .popSubmit {
   width: 100%;
   background: var(--blue);
-  color: var(--white-color);
+  color: var(--white);
   border: none;
   padding: 15px;
   font-family: var(--font-inter), sans-serif;

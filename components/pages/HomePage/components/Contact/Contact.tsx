@@ -62,10 +62,6 @@ export default function Contact() {
                 <input className={cx('cf-inp')} type="email" placeholder="you@email.com" />
               </div>
               <div className={cx('cf-group')}>
-                <label className={cx('cf-label')}>Address</label>
-                <textarea className={cx('cf-ta')} placeholder="Address" rows={4}></textarea>
-              </div>
-              <div className={cx('cf-group')}>
                 <label className={cx('cf-label')}>Service Required</label>
                 <select className={cx('cf-sel')} defaultValue="">
                   <option value="">Select a service…</option>
@@ -76,8 +72,12 @@ export default function Contact() {
                   <option>New Construction</option>
                   <option>Porch / Deck</option>
                   <option>Other</option>
-                  </select>
-                </div>
+                </select>
+              </div>
+              <div className={cx('cf-group')}>
+                <label className={cx('cf-label')}>Address</label>
+                <textarea className={cx('cf-ta')} placeholder="Address" rows={4}></textarea>
+              </div>              
               <div className={cx('cf-group')}>
                 <label className={cx('cf-label')}>Project Details</label>
                 <textarea className={cx('cf-ta')} placeholder="Describe your property and the work needed…" rows={4}></textarea>

@@ -13,5 +13,5 @@
 
 
 @media(max-width:768px){
-  .ba-grid,.contact-grid,.proc-grid{grid-template-columns:1fr}
+  .ba-grid {grid-template-columns:1fr; margin-block:34px;}
 }

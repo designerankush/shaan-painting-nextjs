@@ -61,7 +61,7 @@ export const googleReviewStripContent = {
   logoText: 'Google Reviews',
   rating: '5.0',
   label: 'Trusted by homeowners across Australia',
-  badges: ['5-Star Service', 'Professional & Reliable', 'Licensed & Insured'],
+  badges: ['5-Star Service', 'Fully insured', 'Dulux premium paint', ' No deposit', 'Payment after quality check'],
 };
 
 export const footerContent = {

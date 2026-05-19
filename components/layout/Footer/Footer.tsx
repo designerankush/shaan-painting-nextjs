@@ -14,8 +14,8 @@ export default function Footer() {
 
   return (
     <footer className={cx('footer')}>
-      <div className={cx('ft-grid')}>
-        <div>
+      <div className={cx('container ft-grid')}>
+        <div className={cx('f-column')}>
           <div className={cx('ft-brand')}>
             <img src={brand.logo} alt={brand.alt} />
 

@@ -225,34 +225,7 @@ export default function GoogleTestimonials() {
           </div>
         </div>
 
-        <div className={cx('testi-overall', 'reveal', 'rd2')}>
-          <div className={cx('tov-left')}>
-            <div className={cx('tov-label')}>{overall.label}</div>
-            <div className={cx('tov-num')}>{overall.rating}</div>
-
-            <div className={cx('tov-stars')}>
-              <Stars />
-            </div>
-          </div>
-
-          {overall.stats.map((stat) => (
-            <div className={cx('tov-stat-wrap')} key={stat.label}>
-              <div className={cx('tov-divider')}></div>
-
-              <div className={cx('tov-stat')}>
-                <div className={cx('tov-stat-n')}>{stat.value}</div>
-                <div className={cx('tov-stat-l')}>{stat.label}</div>
-              </div>
-            </div>
-          ))}
-
-          <div className={cx('tov-divider')}></div>
-
-          <a href={overall.cta.href} className={cx('tov-cta')}>
-            {overall.cta.label}
-            <QuoteArrowIcon />
-          </a>
-        </div>
+         
       </div>
     </section>
   );
