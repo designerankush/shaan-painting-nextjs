@@ -31,7 +31,8 @@ export const headerContent = {
 
   navLinks: [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
+    { label: 'Services', href: '/#services' },
+    { label: 'Areas We Service', href: '/#areas' },
     { label: 'Gallery', href: '/#gallery' },
     { label: 'Process', href: '/#process' },
     { label: 'Why Choose Us', href: '/#why-choose' },
@@ -46,10 +47,11 @@ export const headerContent = {
 
 export const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#areas', label: 'Areas We Service' },
   { href: '/#gallery', label: 'Gallery' },
   { href: '/#process', label: 'Process' },
-  { href: '/#why-choose', label: 'Why Us' },
+  { href: '/#why-choose', label: 'Why Choose Us' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -317,7 +319,7 @@ export const googleTestimonialsContent = {
       name: 'Anna Antonijevic',
       date: '1 month ago',
       avatarClass: 'avatarGreen',
-      text: 'Shaan did an outstanding job painting our house in Traralgon. We needed all internal walls (including wet areas and the kitchen) painted. We can not be happier with the quality of his work - the house now looks so beautiful and fresh. Shaan has always been very responsive with great communication, easy to work with, and a high standard of professionalism keeping us updated with progress photos and suggestions for us to consider. Highly recommend Shaan Painting to anyone looking for a painter. We will definitely engage him again for future jobs.',
+      text: 'Shaan did an outstanding job painting our house in Traralgon. We needed all internal walls (including wet areas and the kitchen) painted. We can not be happier with the quality of his work - the house now looks so beautiful and fresh. Shaan has always been very responsive with great communication, easy to work with, and a high standard of professionalism ...',
       service: 'Interior Painting',
     },
     {
@@ -333,7 +335,7 @@ export const googleTestimonialsContent = {
       name: 'Maudy Chirisa',
       date: '2 months ago',
       avatarClass: 'avatarYellow',
-      text: 'I recently hired Shaan from Shaan Painting DS Group for a house painting job in Pakenham and I’m very happy with the result. At the time he didn’t have many reviews, but after speaking with him I decided to give him the opportunity — and he proved himself. Shaan is a professional and reliable house painter in Melbourne. He prepared the walls properly with sanding, patching, and careful preparation, and used high-quality Dulux paint. The finish looks fantastic and the house feels refreshed. Great communication, on time, clean work, and fair price. I highly recommend Shaan Painting DS Group if you are looking for a trusted Melbourne painter.',
+      text: 'I recently hired Shaan from Shaan Painting DS Group for a house painting job in Pakenham and I’m very happy with the result. At the time he didn’t have many reviews, but after speaking with him I decided to give him the opportunity — and he proved himself. Shaan is a professional and reliable house painter in Melbourne. He prepared the walls properly with sanding, patching, ...',
       service: 'New Construction',
     }
   ],

@@ -120,10 +120,10 @@ export default function GoogleTestimonials() {
           </div>
 
           <div className={cx('testi-gbadge')}>
-            <div className={cx('testi-glogo')}>
+            <a href="https://share.google/fTdEiG3QH2UJgv73M" target="_blank" className={cx('testi-glogo')}>
               <div className={cx('g-circle')}>G</div>
               <span className={cx('g-txt')}>{badge.source}</span>
-            </div>
+            </a>
 
             <div className={cx('testi-gbadge-divider')}></div>
 
