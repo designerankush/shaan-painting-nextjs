@@ -5,13 +5,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const {
-      name,
-      email,
-      phone,
-      service,
-      message,
-    } = body;
+    const { name, email, phone, service, suburb, address, message } = body;
 
     if (!name || !email || !phone || !message) {
       return NextResponse.json(
@@ -30,40 +24,37 @@ export async function POST(req: Request) {
       },
     });
 
-    const adminHtml = `
-      <h2>New Free Quote Request</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Service:</strong> ${service || "Not selected"}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message}</p>
-    `;
-
-    const userHtml = `
-      <h2>Thank you for your quote request</h2>
-      <p>Hi ${name},</p>
-      <p>Thank you for contacting us. We have received your request and our team will get back to you soon.</p>
-      <p><strong>Your submitted details:</strong></p>
-      <p><strong>Service:</strong> ${service || "Not selected"}</p>
-      <p><strong>Message:</strong> ${message}</p>
-      <br />
-      <p>Regards,<br />Your Team</p>
-    `;
-
     await transporter.sendMail({
-      from: `"Website Quote Request" <${process.env.QUOTE_FROM_EMAIL}>`,
+      from: `"Shaan Painting" <${process.env.QUOTE_FROM_EMAIL}>`,
       to: process.env.QUOTE_RECEIVER_EMAIL,
       replyTo: email,
-      subject: `New Quote Request from ${name}`,
-      html: adminHtml,
+      subject: `New Free Quote Request from ${name}`,
+      html: `
+        <h2>New Free Quote Request</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Suburb:</strong> ${suburb}</p>
+        <p><strong>Service:</strong> ${service || "Not selected"}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
     });
 
     await transporter.sendMail({
-      from: `"Your Business Name" <${process.env.QUOTE_FROM_EMAIL}>`,
+      from: `"Shaan Painting" <${process.env.QUOTE_FROM_EMAIL}>`,
       to: email,
       subject: "We received your quote request",
-      html: userHtml,
+      html: `
+        <h2>Thank you for your quote request</h2>
+        <p>Hi ${name},</p>
+        <p>Thank you for contacting Shaan Painting. We have received your request and our team will contact you soon.</p>
+        <p><strong>Your message:</strong></p>
+        <p>${message}</p>
+        <br />
+        <p>Regards,<br />Shaan Painting</p>
+      `,
     });
 
     return NextResponse.json({

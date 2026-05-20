@@ -391,6 +391,14 @@ export const quoteFormContent = {
       half: true,
     },
     {
+      type: 'email',
+      name: 'email',
+      label: 'Email',
+      placeholder: 'john@example.com',
+      required: true,
+      half: true,
+    },
+    {
       type: 'tel',
       name: 'phone',
       label: 'Phone Number *',
@@ -404,7 +412,7 @@ export const quoteFormContent = {
       label: 'Suburb',
       placeholder: 'Suburb',
       required: false,
-      half: true,
+      half: false,
     },
     {
       type: 'select',
