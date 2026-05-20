@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Barlow } from 'next/font/google';
-import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
+import QuotePopupProvider from '@/components/common/QuotePopupProvider/QuotePopupProvider';
+import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
 import GoogleTestimonials from '@/components/common/GoogleTestimonials/GoogleTestimonials';
 import './globals.css';
-import QuotePopup from '@/components/popup/QuotePopup/QuotePopup';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -88,12 +88,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} ${barlow.variable}`}>
       <body>
-        <Header />
-        <QuotePopup />
-        {children}
-        <GoogleTestimonials />
-        <Footer />
-        <MobileSticky />
+        <QuotePopupProvider>
+          <Header /> 
+
+          {children}
+
+          <GoogleTestimonials />
+          <Footer />
+          <MobileSticky />
+          
+        </QuotePopupProvider>
       </body>
     </html>
   );

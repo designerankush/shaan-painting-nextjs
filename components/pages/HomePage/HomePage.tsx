@@ -9,14 +9,13 @@ import Cursor from '@/components/common/Cursor/Cursor';
 import Gallery from './components/Gallery/Gallery';
 import Hero from './components/Hero/Hero';
 import Lightbox from '@/components/common/Lightbox/Lightbox';
-import Popup from '@/components/popup/QuotePopup/QuotePopup';
 import Process from './components/Process/Process';
 import Services from './components/Services/Services';
 import Ticker from './components/Ticker/Ticker';
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
 import WhyUs from './components/WhyUs/WhyUs';
 import GoogleReviewStrip from './components/GoogleReviewStrip/GoogleReviewStrip';
-import AreasWeService from './components/AreasWeService/AreasWeService';
+import AreasWeService from './components/AreasWeService/AreasWeService'; 
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes

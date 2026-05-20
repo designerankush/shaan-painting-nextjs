@@ -13,9 +13,12 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "next": "latest",
+    "nodemailer": "^8.0.7",
     "react": "latest",
     "react-dom": "latest",
     "typescript": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.0"
+  }
 }

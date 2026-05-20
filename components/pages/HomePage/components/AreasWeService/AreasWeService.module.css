@@ -14,7 +14,7 @@
 .areasSearchbox input{background:none;border:none;outline:none;color:var(--white);font-size:.8rem;padding:9px 12px 9px 0;width:160px}
 .areasSearchbox input::placeholder{color:rgba(255,255,255,.3)}
 .areasSbtn{background:var(--blue);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:6px;text-decoration:none;transition:background .2s; white-space:nowrap;border:none;cursor:pointer}
-.areasSbtn span { margin-right: 5px; vertical-align: middle;}
+.areasSbtn svg { margin-right: 5px; vertical-align: middle; width: 20px; height: 20px;}
 .areasSbtn:hover{background:var(--blue2)}
 
 /* Grid of region blocks — 2 columns */
@@ -43,6 +43,8 @@
 /* Accordion chevron — hidden on desktop */
 .areaBlockChevron{display:none;width:18px;height:18px;stroke:rgba(255,255,255,.4);fill:none;stroke-width:2.5;flex-shrink:0;transition:transform .3s,stroke .2s}
 .areaBlock.open .areaBlockChevron{transform:rotate(180deg);stroke:var(--blue)}
+
+.noResults{ color: var(--white); text-align: center; min-height: 200px; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 15px; padding: 15px}
 
 @media(max-width:768px){
   .areasSec{padding-block:40px}

@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react';
 import styles from './AreasWeService.module.css';
-import { areasWeServiceContent } from '@/data/siteData';
-import { PhoneIcon } from '@/components/common/Icons/icons';
+import { areasWeServiceContent } from '@/data/siteData'; 
+import { useQuotePopup } from '@/components/common/QuotePopupProvider/QuotePopupProvider';
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes
@@ -34,7 +34,24 @@ function ChevronIcon() {
   );
 }
 
+function QuoteIcon() {
+  return (
+    <svg
+      width="15"
+      height="15"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+  );
+}
+
 export default function AreasWeService() {
+  const { openQuotePopup } = useQuotePopup();
   const [search, setSearch] = useState('');
   const [openRegions, setOpenRegions] = useState<string[]>([]);
 
@@ -98,10 +115,13 @@ export default function AreasWeService() {
               />
             </div>
 
-            <a href={cta.href} className={styles.areasSbtn}>
-              <span><PhoneIcon /></span>
-              {cta.label}
-            </a>
+           <button
+              type="button"
+              className={styles.areasSbtn}
+              onClick={openQuotePopup}
+            >
+              <QuoteIcon /> Free Quote
+            </button>
           </div>
         </div>
 

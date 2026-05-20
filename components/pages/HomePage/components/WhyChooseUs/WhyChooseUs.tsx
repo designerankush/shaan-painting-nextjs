@@ -3,6 +3,7 @@
 import styles from './WhyChooseUs.module.css';
 import { whyChooseUsContent } from '@/data/siteData';
 import {PhoneIcon} from '@/components/common/Icons/icons';
+import { useQuotePopup } from '@/components/common/QuotePopupProvider/QuotePopupProvider';
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes
@@ -37,9 +38,7 @@ function QuoteIcon() {
 }
 
 export default function WhyUs() {
-  const openQuotePopup = () => {
-    window.dispatchEvent(new CustomEvent('openQuotePopup'));
-  };
+  const { openQuotePopup } = useQuotePopup();
 
   return (
     <section className={cx('why-sec')} id="why-choose">

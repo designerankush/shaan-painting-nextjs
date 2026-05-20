@@ -305,45 +305,37 @@ export const googleTestimonialsContent = {
 
   reviews: [
     {
-      initial: 'Z',
-      name: 'Zachary Harrion',
+      initial: 'T',
+      name: 'Tim Holroyd',
       date: '2 weeks ago',
       avatarClass: 'avatarBlue',
-      text: 'Fantastic job done by Adam for the whole house! We’ve used Adam a few times now (for family member homes too) and cannot recommend him enough. Thanks again!',
+      text: 'Shaan painted inside and out at my house in Inverloch, and did a great job. Shaan was polite, punctual and efficient, and did everything promised in the quotation, and a few extra bits too. His ongoing communication and reporting was also very much appreciated. I’m very happy with his work, and I wouldn’t hesitate to recommend his services.',
       service: 'Exterior Painting',
     },
     {
-      initial: 'M',
-      name: 'Mike Ward',
+      initial: 'A',
+      name: 'Anna Antonijevic',
       date: '1 month ago',
       avatarClass: 'avatarGreen',
-      text: 'Adam and the team did a great job painting our place. They are very experienced at their craft, and completed the work in a timely fashion, showing great attention to detail and very clean. Would strongly recommend.',
+      text: 'Shaan did an outstanding job painting our house in Traralgon. We needed all internal walls (including wet areas and the kitchen) painted. We can not be happier with the quality of his work - the house now looks so beautiful and fresh. Shaan has always been very responsive with great communication, easy to work with, and a high standard of professionalism keeping us updated with progress photos and suggestions for us to consider. Highly recommend Shaan Painting to anyone looking for a painter. We will definitely engage him again for future jobs.',
       service: 'Interior Painting',
     },
     {
-      initial: 'H',
-      name: 'Henery Mccoy',
-      date: '6 weeks ago',
+      initial: 'D',
+      name: 'Daniel MacRae',
+      date: '2 month ago',
       avatarClass: 'avatarRed',
-      text: "We just had the exterior of our house painted by Adam and his team. We are very pleased with the result. Well priced compared to other quotes. The guys turned up on time and left everything clean and tidy. He knows his craft and is great to work with. We will use them again and recommend them highly.",
+      text: "Fantastic service. Great communication throughout my job. Very happy with his workmanship. Highly recommend",
       service: 'Weatherboard Restore',
     },
     {
       initial: 'M',
-      name: 'Michael D.',
+      name: 'Maudy Chirisa',
       date: '2 months ago',
       avatarClass: 'avatarYellow',
-      text: 'Got three quotes and Shaan was honest, fair and transparent. Turned up on time every day, kept the site incredibly clean and delivered well ahead of schedule. Finish quality is second to none.',
+      text: 'I recently hired Shaan from Shaan Painting DS Group for a house painting job in Pakenham and I’m very happy with the result. At the time he didn’t have many reviews, but after speaking with him I decided to give him the opportunity — and he proved himself. Shaan is a professional and reliable house painter in Melbourne. He prepared the walls properly with sanding, patching, and careful preparation, and used high-quality Dulux paint. The finish looks fantastic and the house feels refreshed. Great communication, on time, clean work, and fair price. I highly recommend Shaan Painting DS Group if you are looking for a trusted Melbourne painter.',
       service: 'New Construction',
-    },
-    {
-      initial: 'L',
-      name: 'Linda P.',
-      date: '3 months ago',
-      avatarClass: 'avatarPurple',
-      text: 'Painted our front door and all window trims — what a transformation! So careful and precise. The colour consultation was really helpful. Our neighbours keep asking who did the work!',
-      service: 'Doors & Trim',
-    }, 
+    }
   ],
 
   overall: {

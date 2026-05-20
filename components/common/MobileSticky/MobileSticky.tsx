@@ -1,5 +1,6 @@
 'use client';
 
+import { useQuotePopup } from '../QuotePopupProvider/QuotePopupProvider';
 import styles from './MobileSticky.module.css';
 import { mobileStickyContent } from '@/data/siteData';
 
@@ -34,9 +35,7 @@ function QuoteIcon() {
 }
 
 export default function MobileSticky() {
-  const openQuotePopup = () => {
-    window.dispatchEvent(new CustomEvent('openQuotePopup'));
-  };
+  const { openQuotePopup } = useQuotePopup();
 
   return (
     <div className={styles.mobSticky}>

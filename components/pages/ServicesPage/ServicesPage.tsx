@@ -63,7 +63,7 @@ export default function AreasPage() {
   };
 
   const openQuotePopup = () => {
-    window.dispatchEvent(new CustomEvent('openQuotePopup'));
+    window.dispatchEvent(new CustomEvent('useQuotePopup'));
   };
 
   return (
