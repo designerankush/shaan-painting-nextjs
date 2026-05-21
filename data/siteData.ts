@@ -1,21 +1,51 @@
 export const IMG = {
   logo: '/images/logo.png',
+
   img1: '/images/hero/shaan-slide1.webp', 
   img2: '/images/hero/shaan-slide2.webp', 
   img3: '/images/hero/shaan-slide3.webp', 
-  img4: '/images/img3.jpg', 
-  img5: '/images/img4.jpg', 
-  img6: '/images/img5.jpg',
-  img7: '/images/img6.jpg', 
-  img8: '/images/img8.jpg', 
-  img9: '/images/img9.jpg', 
-  img10: '/images/img10.jpg',
-  img11: '/images/img11.jpg', 
-  img12: '/images/img12.jpg', 
-  img13: '/images/img13.jpg', 
-  img14: '/images/img14.jpg', 
-  img15: '/images/img15.jpg',
+
+  gal1: '/images/gallery/gal1.webp', 
+  gal2: '/images/gallery/gal2.webp', 
+  gal3: '/images/gallery/gal3.webp',
+  gal4: '/images/gallery/gal4.webp',
+  gal5: '/images/gallery/gal5.webp',
+  gal6: '/images/gallery/gal6.webp',
+  gal7: '/images/gallery/gal7.webp',
+  gal8: '/images/gallery/gal8.webp',
+  gal9: '/images/gallery/gal9.webp',
+  gal10: '/images/gallery/gal10.webp',
+  gal11: '/images/gallery/gal11.webp',
+  gal12: '/images/gallery/gal12.webp',
+  gal13: '/images/gallery/gal13.webp',
+  gal14: '/images/gallery/gal14.webp',
+  gal15: '/images/gallery/gal15.webp',
+  
+  b1: '/images/before-after/p1-before.webp',
+  a1: '/images/before-after/p1-after.webp',
+  
+  b2: '/images/before-after/p2-before.webp',
+  a2: '/images/before-after/p2-after.webp',
+  
+  b3: '/images/before-after/p3-before.webp',
+  a3: '/images/before-after/p3-after.webp',
+
+  b4: '/images/before-after/p4-before.webp',
+  a4: '/images/before-after/p4-after.webp',
+  
+  b5: '/images/before-after/p5-before.webp',
+  a5: '/images/before-after/p5-after.webp',
+  
+  b6: '/images/before-after/p6-before.webp',
+  a6: '/images/before-after/p6-after.webp',
+
 };
+
+export const heroSlides = [
+  { src: IMG.img1, tag: 'Porch Transformation' },
+  { src: IMG.img2, tag: 'Full Exterior Repaint' },
+  { src: IMG.img3, tag: 'Heritage Home Restored' }, 
+];
 
 export const headerContent = {
   logo: {
@@ -53,12 +83,6 @@ export const navLinks = [
   { href: '/#process', label: 'Process' },
   { href: '/#why-choose', label: 'Why Choose Us' },
   { href: '/#contact', label: 'Contact' },
-];
-
-export const heroSlides = [
-  { src: IMG.img1, tag: 'Porch Transformation' },
-  { src: IMG.img2, tag: 'Full Exterior Repaint' },
-  { src: IMG.img3, tag: 'Heritage Home Restored' }, 
 ];
 
 export const googleReviewStripContent = {
@@ -123,18 +147,6 @@ export const footerContent = {
   },
 };
 
-export const mobileStickyContent = {
-  call: {
-    label: 'Call Now',
-    text: '0451 644 200',
-    href: 'tel:0451644200',
-  },
-  quote: {
-    label: 'Free Quote',
-    text: 'No obligation',
-  },
-};
-
 export const services = [
   ['01', '🏠', 'Interior House Painting Melbourne', 'Walls, ceilings, trims and built-ins. We protect your furnishings, fill and sand all defects, and deliver a smooth lasting finish.'],
   ['02', '🛋️', 'Exterior House Painters Melbourne', 'Full repaints — weatherboard prep, power wash, prime and topcoat. We restore aged exteriors to pristine condition that lasts.'],
@@ -145,22 +157,30 @@ export const services = [
 ];
 
 export const galleryData = [
-  { src: IMG.img1, label: 'Porch Repaint', cls: 'c5 r2' },
-  { src: IMG.img6, label: 'Kitchen Interior', cls: 'c4' },
-  { src: IMG.img10, label: 'French Doors White', cls: 'c3' },
-  { src: IMG.img7, label: 'Exterior Repaint', cls: 'c7' },
-  { src: IMG.img9, label: 'Bedroom Progress', cls: 'c3 r2' },
-  { src: IMG.img2, label: 'Heritage Exterior', cls: 'c4' },
-  { src: IMG.img12, label: 'Dark French Doors', cls: 'c4' },
-  { src: IMG.img15, label: 'Bedroom After', cls: 'c4' },
-  { src: IMG.img14, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal1, label: 'Porch Repaint', cls: 'c5 r2' },
+  { src: IMG.gal2, label: 'Kitchen Interior', cls: 'c4' },
+  { src: IMG.gal3, label: 'French Doors White', cls: 'c3' },
+  { src: IMG.gal4, label: 'Exterior Repaint', cls: 'c7' },
+  { src: IMG.gal5, label: 'Bedroom Progress', cls: 'c3 r2' },
+  { src: IMG.gal6, label: 'Heritage Exterior', cls: 'c4' },
+  { src: IMG.gal7, label: 'Dark French Doors', cls: 'c4' },
+  { src: IMG.gal8, label: 'Bedroom After', cls: 'c4' },
+  { src: IMG.gal9, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal10, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal11, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal12, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal13, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal14, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal15, label: 'Cottage After', cls: 'c5' },
 ];
 
 export const beforeAfter = [
-  { b: IMG.img4, a: IMG.img2, t: 'Weatherboard Exterior' },
-  { b: IMG.img5, a: IMG.img1, t: 'Front Porch & Entry' },
-  { b: IMG.img8, a: IMG.img14, t: 'Heritage Cottage' },
-  { b: IMG.img11, a: IMG.img7, t: 'Side Exterior Repaint' },
+  { b: IMG.b1, a: IMG.a1, t: 'Weatherboard Exterior' },
+  { b: IMG.b2, a: IMG.a2, t: 'Side Exterior Repaint' },
+  { b: IMG.b3, a: IMG.a3, t: 'Heritage Cottage' },
+  { b: IMG.b4, a: IMG.a4, t: 'Front Porch & Entry' },
+  { b: IMG.b5, a: IMG.a5, t: 'Exterior Repaint' },
+  { b: IMG.b6, a: IMG.a6, t: 'Interior House Painting' },
 ];
 
 export const processSteps = [
@@ -730,4 +750,17 @@ export const areasWeServiceContent = {
       ],
     },
   ],
+};
+
+
+export const mobileStickyContent = {
+  call: {
+    label: 'Call Now',
+    text: '0451 644 200',
+    href: 'tel:0451644200',
+  },
+  quote: {
+    label: 'Free Quote',
+    text: 'No obligation',
+  },
 };

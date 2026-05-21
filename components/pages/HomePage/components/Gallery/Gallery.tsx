@@ -12,25 +12,27 @@ function cx(...classes: Array<string | false | null | undefined>) {
     .join(' ');
 }
 
+const DESKTOP_LIMIT = 9;
+const MOBILE_LIMIT = 6;
+
 function getGalleryLimit() {
-  if (typeof window === 'undefined') return 8;
+  if (typeof window === 'undefined') return DESKTOP_LIMIT;
 
-  if (window.innerWidth <= 640) return 6;
-  if (window.innerWidth <= 991) return 8;
+  if (window.innerWidth <= 640) return MOBILE_LIMIT;
 
-  return 8;
+  return DESKTOP_LIMIT;
 }
 
 export default function Gallery({ onOpen }: { onOpen: (src: string) => void }) {
-  const [visibleCount, setVisibleCount] = useState(8);
-  const [loadStep, setLoadStep] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(DESKTOP_LIMIT);
+  const [loadStep, setLoadStep] = useState(DESKTOP_LIMIT);
 
   useEffect(() => {
     const updateLimit = () => {
       const limit = getGalleryLimit();
 
       setLoadStep(limit);
-      setVisibleCount((current) => Math.max(current, limit));
+      setVisibleCount(limit);
     };
 
     updateLimit();
@@ -49,7 +51,9 @@ export default function Gallery({ onOpen }: { onOpen: (src: string) => void }) {
   const hasMore = visibleCount < galleryData.length;
 
   const handleLoadMore = () => {
-    setVisibleCount((current) => Math.min(current + loadStep, galleryData.length));
+    setVisibleCount((current) =>
+      Math.min(current + loadStep, galleryData.length)
+    );
   };
 
   return (
@@ -91,7 +95,7 @@ export default function Gallery({ onOpen }: { onOpen: (src: string) => void }) {
               className={cx('loadMoreBtn')}
               onClick={handleLoadMore}
             >
-              Load More Projects
+              Load More
             </button>
           </div>
         )}

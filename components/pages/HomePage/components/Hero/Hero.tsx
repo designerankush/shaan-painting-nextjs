@@ -12,7 +12,6 @@ function cx(...classes: Array<string | false | null | undefined>) {
     .join(' ');
 }
 
-
 function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
   event.preventDefault();
   document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
