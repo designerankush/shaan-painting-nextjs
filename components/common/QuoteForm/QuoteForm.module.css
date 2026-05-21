@@ -120,10 +120,9 @@
 }
 
 .successBox h3 {
-  font-family: var(--font-playfair), serif;
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text);
+  color: var(--white); 
 }
 
 .successBox p {
