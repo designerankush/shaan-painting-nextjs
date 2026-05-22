@@ -63,7 +63,3 @@ h2.sec-title.wh{color:var(--white);}
 .btn-out{border:2px solid rgba(255,255,255,.35);color:var(--white); font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;transition:all .3s;text-decoration:none;display:inline-block}
 .btn-out:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 
-/* Quote popup css */
-.modalContent .successBox h3 {
-  color: var(--blue2);
-} 

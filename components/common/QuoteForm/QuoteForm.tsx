@@ -83,7 +83,7 @@ export default function QuoteForm({ variant = 'contact', onSuccess }: QuoteFormP
 
   if (isSuccess) {
     return (
-      <div className={styles.successBox} id="success-message">
+      <div className={`${styles.successBox} ${styles[variant]}`}>
         <h3>{success.title}</h3>
         <p>{success.text}</p>
       </div>

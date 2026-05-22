@@ -125,6 +125,11 @@
   color: var(--white); 
 }
 
+/* Quote popup css */
+.successBox.popup h3 {
+  color: var(--blue2);
+} 
+
 .successBox p {
   color: var(--muted);
   font-size: 0.9rem;
