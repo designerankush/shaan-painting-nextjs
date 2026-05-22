@@ -40,7 +40,6 @@ export const IMG = {
   
   b6: '/images/before-after/p6-before.webp',
   a6: '/images/before-after/p6-after.webp',
-
 };
 
 export const heroSlides = [
