@@ -53,6 +53,7 @@ export async function POST(req: Request) {
     });
 
     const adminHtml = `
+      <div><img src="https://www.shaanpainting.com.au/images/logo.png" width="160" height="auto" alt="Shaan Painting DS Group Pty Ltd"></div>
       <h2>New Free Quote Request</h2>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
@@ -65,17 +66,13 @@ export async function POST(req: Request) {
     `;
 
     const userHtml = `
+      <div><img src="https://www.shaanpainting.com.au/images/logo.png" width="160" height="auto" alt="Shaan Painting DS Group Pty Ltd"></div>
       <h2>Thank you for your quote request</h2>
       <p>Hi ${name},</p>
       <p>Thank you for contacting Shaan Painting. We have received your request and our team will contact you soon.</p>
-      <p><strong>Your submitted details:</strong></p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Service:</strong> ${service || 'Not selected'}</p>
-      <p><strong>Suburb:</strong> ${suburb || 'Not provided'}</p>
-      <p><strong>Address:</strong> ${address || 'Not provided'}</p>
-      <p><strong>Project Details:</strong> ${message || 'Not provided'}</p>
+      <p><strong>Your submitted details:</strong></p>      
       <br />
-      <p>Regards,<br />Shaan Painting</p>
+      <p>Regards,<br />Shaan Painting DS Group Pty Ltd</p>
     `;
 
     await transporter.sendMail({

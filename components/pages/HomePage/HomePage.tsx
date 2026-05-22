@@ -31,7 +31,7 @@ const localBusinessSchema = {
   name: 'Shaan Painting DS Group Pty Ltd',
   image: '/images/logo.jpg',
   telephone: '+61451644200',
-  email: 'Shaanpainting3978@gmail.com',
+  email: 'contact@shaanpainting.com',
   priceRange: '$$',
   url: '/',
   description: 'Premium residential interior and exterior painting services with free on-site quotes.',

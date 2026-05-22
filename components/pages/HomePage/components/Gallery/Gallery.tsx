@@ -12,7 +12,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
     .join(' ');
 }
 
-const DESKTOP_LIMIT = 9;
+const DESKTOP_LIMIT = 12;
 const MOBILE_LIMIT = 6;
 
 function getGalleryLimit() {

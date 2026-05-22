@@ -132,8 +132,8 @@ export const footerContent = {
       href: 'tel:0451644200',
     },
     email: {
-      label: 'Shaanpainting3978@gmail.com',
-      href: 'mailto:Shaanpainting3978@gmail.com',
+      label: 'contact@shaanpainting.com',
+      href: 'mailto:contact@shaanpainting.com',
     },
     cta: {
       label: 'Request a Quote',
@@ -158,29 +158,22 @@ export const services = [
 
 export const galleryData = [
   { src: IMG.gal1, label: 'Porch Repaint', cls: 'c5 r2' },
-  { src: IMG.gal2, label: 'Kitchen Interior', cls: 'c4' },
-  { src: IMG.gal3, label: 'French Doors White', cls: 'c3' },
-  { src: IMG.gal4, label: 'Exterior Repaint', cls: 'c7' },
-  { src: IMG.gal5, label: 'Bedroom Progress', cls: 'c3 r2' },
-  { src: IMG.gal6, label: 'Heritage Exterior', cls: 'c4' },
-  { src: IMG.gal7, label: 'Dark French Doors', cls: 'c4' },
-  { src: IMG.gal8, label: 'Bedroom After', cls: 'c4' },
-  { src: IMG.gal9, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal10, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal11, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal12, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal13, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal14, label: 'Cottage After', cls: 'c5' },
-  { src: IMG.gal15, label: 'Cottage After', cls: 'c5' },
+  { src: IMG.gal2, label: 'Heritage Exterior', cls: 'c4' },
+  { src: IMG.gal3, label: 'Interior House Painting', cls: 'c3' },
+  { src: IMG.gal4, label: 'Room Painting', cls: 'c7' },
+  { src: IMG.gal5, label: 'Kitchen Interior', cls: 'c3 r2' },
+  { src: IMG.gal6, label: 'French Doors White', cls: 'c4' },
+  { src: IMG.gal7, label: 'Sky Window Ceiling', cls: 'c4' },
+  { src: IMG.gal8, label: 'Exterior Repaint', cls: 'c4' },
 ];
 
 export const beforeAfter = [
-  { b: IMG.b1, a: IMG.a1, t: 'Weatherboard Exterior' },
-  { b: IMG.b2, a: IMG.a2, t: 'Side Exterior Repaint' },
-  { b: IMG.b3, a: IMG.a3, t: 'Heritage Cottage' },
+  { b: IMG.b1, a: IMG.a1, t: 'Kitchen' },
+  { b: IMG.b2, a: IMG.a2, t: 'Exterior Weatherboard' },
+  { b: IMG.b3, a: IMG.a3, t: 'Interior House Painting' },
   { b: IMG.b4, a: IMG.a4, t: 'Front Porch & Entry' },
-  { b: IMG.b5, a: IMG.a5, t: 'Exterior Repaint' },
-  { b: IMG.b6, a: IMG.a6, t: 'Interior House Painting' },
+  { b: IMG.b5, a: IMG.a5, t: 'Timber Door Repaint' },
+  { b: IMG.b6, a: IMG.a6, t: 'Interior Room Painting' },
 ];
 
 export const processSteps = [
@@ -322,7 +315,7 @@ export const googleTestimonialsContent = {
     source: 'Google',
     rating: '5.0',
     outOf: '/ 5.0',
-    count: 'Based on Google Reviews',
+    count: 'Click here to show real review',
   },
 
   reviews: [
@@ -388,8 +381,8 @@ export const quoteFormContent = {
       href: 'tel:0451644200',
     },
     email: {
-      label: 'Shaanpainting3978@gmail.com',
-      href: 'mailto:Shaanpainting3978@gmail.com',
+      label: 'contact@shaanpainting.com',
+      href: 'mailto:contact@shaanpainting.com',
     },
   },
 

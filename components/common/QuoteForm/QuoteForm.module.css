@@ -124,9 +124,6 @@
   font-weight: 800;
   color: var(--white); 
 }
-.popBody .successBox h3 {
-  color: var(--blue2); 
-} 
 
 .successBox p {
   color: var(--muted);

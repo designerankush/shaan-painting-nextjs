@@ -68,7 +68,7 @@ export default function QuoteForm({ variant = 'contact', onSuccess }: QuoteFormP
       if (onSuccess) {
         setTimeout(() => {
           onSuccess();
-        }, 15200);
+        }, 1005200);
       }
     } catch (error) {
       setErrorMessage(

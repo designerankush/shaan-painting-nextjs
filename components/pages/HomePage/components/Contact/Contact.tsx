@@ -37,12 +37,16 @@ export default function Contact() {
             <p>Fill in the form and we'll get back within 24 hours with a detailed, no-obligation quote tailored to your project.</p>
             <div className={cx('cdetails')}>
               <a href="tel:0451644200" className={cx('cd-phone')}><div className={cx('cd-phone-icon')}><PhoneIcon size={24} /></div><div><div className={cx('cd-phone-label')}>Call Us Anytime</div><div className={cx('cd-phone-num')}>0451 644 200</div></div></a>
-              <a href="mailto:Shaanpainting3978@gmail.com" className={cx('cd-row')}><div className={cx('cd-icon')}><MailIcon size={20} /></div><div><div className={cx('cd-label')}>Email Us</div><div className={cx('cd-val')}>Shaanpainting3978@gmail.com</div></div></a>
+              <a href="mailto:contact@shaanpainting.com" className={cx('cd-row')}>
+                <div className={cx('cd-icon')}>
+                  <MailIcon size={20} /></div><div><div className={cx('cd-label')}>Email Us</div><div className={cx('cd-val')}>contact@shaanpainting.com</div>
+                </div>
+              </a>
               <div className={cx('cd-row')} style={{ cursor: 'default' }}><div className={cx('cd-icon')}><HomeIcon /></div><div><div className={cx('cd-label')}>Company</div><div className={cx('cd-val')}>Shaan Painting DS Group Pty Ltd</div></div></div>
             </div>
           </div>
 
-          <div className={cx('cform-box reveal rd1')}>
+          <div className={cx('cform-box reveal rd1')} id="quote-form">
             <h3 className={cx('cform-title')}>Free Quote Request</h3>
             
             <QuoteForm variant="contact" />

@@ -137,7 +137,7 @@ export default function GoogleTestimonials() {
                 <span className={cx('testi-gbadge-of')}>{badge.outOf}</span>
               </div>
 
-              <div className={cx('testi-gbadge-count')}>{badge.count}</div>
+              <a href="https://share.google/fTdEiG3QH2UJgv73M" target="_blank" className={cx('testi-gbadge-count')}>{badge.count}</a>
             </div>
           </div>
         </div>
