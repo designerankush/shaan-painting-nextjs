@@ -26,10 +26,18 @@
 /* stats bar */
 .hstats{position:absolute;bottom:0;left:0;right:0;z-index:20;display:flex;border-top:1px solid rgba(255,255,255,.08)}
 .hstat{flex:1;padding:18px 20px;background:rgba(6,16,28,.8);backdrop-filter:blur(20px);border-right:1px solid rgba(255,255,255,.06);text-align:center}
-.hstat-n{font-family: var(--font-barlow), serif;font-size:1.9rem;font-weight:800;color:var(--white);line-height:1}
-.hstat-l{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
+.hstat-n{font-family: var(--font-barlow), serif;font-size:1.9rem;font-weight:700;color:var(--white);line-height:1}
+.hstat-l{font-size:.58rem; letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
 
 @media(max-width:768px){
+  .hero{ min-height:550px;overflow:hidden}
+  .hsub{ margin-bottom: 15px; font-size:.825rem;}
+  .hero h1 {font-size: 2.5rem; line-height: 1.1;}
+  .hslide.active img{transform:scale(1.15)}
+  .hslide:not(.active) img{transform:scale(1);}
+  .hbtns{gap:10px}
   .hdots{bottom:20px;}
-  .hsub{ margin-bottom: 15px; }
+  .htag {margin-bottom: 15px;}
+  .hstat-n{font-size:1rem;}
+  .hstat-l{font-size:.50rem;}
 }
