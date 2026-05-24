@@ -42,12 +42,40 @@ export const IMG = {
   a6: '/images/before-after/p6-after.webp',
 };
 
+// export const heroSlidesold = [
+//   { src: IMG.hero1, tag: 'Exterier Painting' },
+//   { src: IMG.hero2, tag: 'Full Exterior Repaint' },
+//   { src: IMG.hero3, tag: 'Heritage Home Restored' }, 
+//   { src: IMG.hero4, tag: 'Outside Home Restored' },
+//   { src: IMG.hero5, tag: 'Doors & Trim' },
+// ];
+
 export const heroSlides = [
-  { src: IMG.hero1, tag: 'Exterier Painting' },
-  { src: IMG.hero2, tag: 'Full Exterior Repaint' },
-  { src: IMG.hero3, tag: 'Heritage Home Restored' }, 
-  { src: IMG.hero4, tag: 'Outside Home Restored' },
-  { src: IMG.hero5, tag: 'Doors & Trim' },
+  {
+    src: '/images/hero/hero-slide1.webp',
+    mobileSrc: '/images/hero/mob-slide1.webp',
+    tag: 'Exterier Painting',
+  },
+  {
+    src: '/images/hero/hero-slide2.webp',
+    mobileSrc: '/images/hero/mob-slide2.webp',
+    tag: 'Full Exterior Repaint',
+  },
+  {
+    src: '/images/hero/hero-slide3.webp',
+    mobileSrc: '/images/hero/mob-slide3.webp',
+    tag: 'Heritage Home Restored',
+  },
+  {
+    src: '/images/hero/hero-slide4.webp',
+    mobileSrc: '/images/hero/mob-slide4.webp',
+    tag: 'Doors & Trim',
+  },
+  {
+    src: '/images/hero/hero-slide5.webp',
+    mobileSrc: '/images/hero/mob-slide5.webp',
+    tag: 'Doors & Trim',
+  },
 ];
 
 export const headerContent = {

@@ -23,25 +23,36 @@ const barlow = Barlow({
 });
 
 const siteName = 'Shaan Painting DS Group Pty Ltd';
-const title = 'Shaan Painting DS Group | Professional House Painters';
-const description = 'Premium residential interior and exterior painting services by Shaan Painting DS Group Pty Ltd. Free on-site quotes, professional preparation, and flawless finishes.';
+const title = 'House Painters Melbourne, Geelong & Ballarat | Interior & Exterior Painting | Shaan Painting DS Group';
+const description = 'Shaan Painting DS Group provides premium interior and exterior painting services across Melbourne, Geelong, Ballarat and Gippsland. Specialists in house repainting, weatherboards, ceilings, walls, timber restoration and commercial painting. Free quotes. Fully insured. Fully committed.';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shaanpainting.com'),
+  metadataBase: new URL('https://shaanpainting.com.au/'),
   title: {
     default: title,
     template: `%s | ${siteName}`,
   },
   description,
   keywords: [
-    'Shaan Painting',
-    'Shaan Painting DS Group',
-    'house painters',
-    'residential painting',
-    'interior painting',
-    'exterior painting',
-    'weatherboard restoration',
-    'free painting quote',
+    'house painters Melbourne',
+    'painters Melbourne',
+    'house painters Geelong',
+    'painters Geelong',
+    'house painters Ballarat',
+    'painters Ballarat',
+    'painters Gippsland',
+    'painters Traralgon',
+    'painters Morwell',
+    'painters Warragul',
+    'painters Pakenham',
+    'interior painting Melbourne',
+    'exterior painting Melbourne',
+    'weatherboard painters',
+    'residential painters',
+    'commercial painters',
+    'repaint specialists',
+    'Dulux painters Melbourne',
+    'free painting quote Melbourne',
   ],
   applicationName: siteName,
   authors: [{ name: siteName }],
