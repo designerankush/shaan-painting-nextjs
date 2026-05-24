@@ -6,23 +6,28 @@
 .hslide:not(.active) img{transform:scale(1);}
 .hov1{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,16,28,.88) 0%,rgba(6,16,28,.55) 52%,rgba(6,16,28,.15) 100%)}
 .hov2{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,16,28,.85) 0%,transparent 45%)}
+
 .hcont{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;justify-content:center;padding:0 6%;max-width:1200px}
 .htag{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;animation:slideUp .8s .25s both}
 .htag-line{width:32px;height:2px;background:var(--blue)}
 .htag-txt{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blueM)}
+
 .hero h1{font-size:clamp(3rem,3.5vw,3.5rem);font-weight:700;color:var(--white);line-height:1.2;letter-spacing:-.01em;margin-bottom:15px;animation:slideUp .85s .4s both}
 .hero h1 em{color:var(--blueM);font-style:italic}
+
 .hsub{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:480px;margin-bottom:30px;font-weight:300;animation:slideUp .8s .55s both}
 .hbtns{display:flex;gap:14px;flex-wrap:wrap;animation:slideUp .8s .7s both}
 .btn-fill{background:var(--blue);color:var(--white);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:16px 34px;border:2px solid var(--blue);transition:all .3s;text-decoration:none;display:inline-block}
 .btn-fill:hover{background:var(--white);color:var(--blue)}
 .btn-out{border:2px solid rgba(255,255,255,.35);color:var(--white);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;transition:all .3s;text-decoration:none;display:inline-block}
 .btn-out:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+
 .hdots{position:absolute;bottom:96px;left:6%;z-index:20;display:flex;gap:8px;align-items:center}
 .hdot{border:0;padding:0;display:block; height:2px;background:rgba(255,255,255,.25);cursor:pointer;transition:all .4s}
 .hdot.active{width:48px;background:var(--blue)}.hdot:not(.active){width:22px}
 .hctr{position:absolute;bottom:96px;right:5%;z-index:20;font-size:.68rem;font-weight:600;letter-spacing:.1em;color:rgba(255,255,255,.4)}
 .hctr strong{color:var(--white); font-family: var(--font-barlow), serif; font-size:1.1rem;font-weight:700}
+
 /* stats bar */
 .hstats{position:absolute;bottom:0;left:0;right:0;z-index:20;display:flex;border-top:1px solid rgba(255,255,255,.08)}
 .hstat{flex:1;padding:18px 20px;background:rgba(6,16,28,.8);backdrop-filter:blur(20px);border-right:1px solid rgba(255,255,255,.06);text-align:center}
@@ -35,8 +40,7 @@
   .hero h1 {font-size: 2.5rem; line-height: 1.1;}
   .hslide.active img{transform:scale(1.12)}
   .hslide:not(.active) img{transform:scale(1);}
-  .hbtns{gap:10px}
-  .hdots{bottom:85px;}
+  .hbtns{gap:10px} 
   .htag {margin-bottom: 15px;}
   .hstat-n{font-size:1rem;}
   .hstat-l{font-size:.50rem;}

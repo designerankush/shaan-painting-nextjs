@@ -39,7 +39,7 @@ export default function Hero() {
       <div className={cx('hov1')}></div><div className={cx('hov2')}></div>
       <div className={cx('hcont')}>
         <div className={cx('htag')}><span className={cx('htag-line')}></span><span className={cx('htag-txt')}>Fully Insured Residential & Commercial Painters</span></div>
-        <h1>Premium Painting Services Across<br /><em> Melbourne & Regional Victoria.</em></h1>
+        <h1>Premium Painting Services Across 420<br /><em> Melbourne & Regional Victoria.</em></h1>
         <p className={cx('hsub')}>Interior • Exterior • Weatherboard • New Homes <br/> Professional Dulux Finishes With Long-Lasting Results</p>
         <div className={cx('hbtns')}>
           <a href="#contact" className={cx('btn-fill')} onClick={(e) => scrollToSection(e, '#contact')}>Get Free Quote</a>
