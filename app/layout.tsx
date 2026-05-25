@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description,
+ 
   keywords: [
     'house painters Melbourne',
     'painters Melbourne',
