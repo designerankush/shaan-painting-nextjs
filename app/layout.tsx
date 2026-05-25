@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description,
- 
+
+  verification: {
+    google: '-E3mDiEY5VYro_Go1Eig1w4ekqj8EnGNfHO6LaNkyZ4',
+  },
+
   keywords: [
     'house painters Melbourne',
     'painters Melbourne',
