@@ -7,7 +7,7 @@ export const IMG = {
   hero4: '/images/hero/hero-slide4.webp', 
   hero5: '/images/hero/hero-slide5.webp',
   
-  about: '/images/about-pic.webp',
+  aboutwhy: '/images/about-pic.webp',
 
   gal1: '/images/gallery/gal1.webp', 
   gal2: '/images/gallery/gal2.webp', 
@@ -224,7 +224,7 @@ export const whyChooseUsContent = {
     'We are a locally trusted painting company committed to quality, honesty and results that last. Every job — big or small — receives the same professional standard.',
 
   image: {
-    src: IMG.hero2,
+    src: IMG.aboutwhy,
     alt: 'Quality painting work',
   },
 

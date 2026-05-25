@@ -15,7 +15,7 @@ export default function About() {
     <section className={cx('about')} id="about">
       <div className={cx('about-grid')}>
         <div className={cx('about-img')}>
-          <img src={IMG.about} alt="Shaan Painting" />
+          <img src={IMG.gal1} alt="Shaan Painting" />
           <div className={cx('about-logo')}>
             <img src={IMG.logo} alt="Shaan Painting work" width="200" />
           </div>
