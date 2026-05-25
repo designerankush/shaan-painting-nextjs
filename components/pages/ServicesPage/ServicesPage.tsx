@@ -69,7 +69,7 @@ export default function AreasPage() {
   return (
     <main>
       <section className={styles.hero}>
-        <div className={styles.heroBgGlow}></div>
+       
         <div className={styles.heroGridLines}></div>
 
         <div className={styles.heroContent}>

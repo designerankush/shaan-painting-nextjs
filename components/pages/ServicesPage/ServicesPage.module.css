@@ -1,4 +1,103 @@
- .regionJumpPills {
+/* ─── HERO ─── */
+.hero{
+  position:relative;min-height:680px;
+  background:linear-gradient(125deg,var(--dark) 0%,var(--dark2) 45%,#0a2a5e 100%);
+  overflow:hidden;display:flex;align-items:center;
+  padding:80px 5% 0;
+}
+
+.heroGridLines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+.heroWave{
+  position:absolute;bottom:-1px;left:0;right:0;
+  height:80px;pointer-events:none;
+}
+.heroContent{position:relative;z-index:2; max-width:650px; margin: 0 auto; text-align: center;}
+.heroEyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-bottom:22px;
+}
+.heroEyebrowLine{width:28px;height:2px;background:var(--blueM)}
+.heroEyebrowText{
+  font-size:.62rem;font-weight:800;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--blueM);
+}
+.hero h1{
+  font-size:clamp(2.8rem,5.5vw,4.2rem);
+  font-weight:900;color:white;line-height:1.0;
+  letter-spacing:-.02em;margin-bottom:18px;
+}
+.hero h1 em{color:var(--blueM);font-style:italic}
+.heroDesc{
+  font-size:1rem;color:rgba(255,255,255,.6);
+  line-height:1.8; margin-bottom:36px;font-weight:400;
+}
+
+.heroStats{display:flex;gap:0;flex-wrap:wrap; align-items: center; justify-content: center;}
+.hstat{
+  padding:16px 24px;text-align:center;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.09);
+  border-right:none;transition:background .3s;
+}
+.hstat:first-child{border-radius:10px 0 0 10px}
+.hstat:last-child{border-right:1px solid rgba(255,255,255,.09);border-radius:0 10px 10px 0}
+.hstat:hover{background:rgba(0,113,197,.2)}
+.hstatN{font-size:1.7rem;font-weight:900;color:white;line-height:1}
+.hstatL{font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
+
+/* ─── SEARCH STRIP ─── */
+.searchStrip{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:28px 5%;
+  position:sticky;top:76px;z-index:100;
+  box-shadow:0 4px 20px rgba(0,113,197,.05);
+}
+.searchStripInner{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.searchBox{
+  flex:1;min-width:260px;
+  display:flex;border:2px solid var(--blueM);
+  border-radius:10px;overflow:hidden;
+  background:white;
+  box-shadow:0 2px 16px rgba(0,113,197,.08);
+  transition:border-color .25s,box-shadow .25s;
+}
+.searchBox:focus-within{border-color:var(--blue);box-shadow:0 4px 20px rgba(0,113,197,.15)}
+.searchBox input{
+  flex:1;padding:13px 18px;border:none;outline:none;
+  font-size:.92rem;color:var(--text);background:transparent;
+}
+.searchBox input::placeholder{color:var(--muted)}
+.searchIcon{
+  padding:0 16px;display:flex;align-items:center;
+  color:var(--muted);
+}
+.searchIcon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.searchResultsTxt{
+  font-size:.78rem;font-weight:600;color:var(--muted);
+  white-space:nowrap;
+}
+.searchResultsTxt strong{color:var(--blue)}
+
+
+.regionJumpPills{display:flex;gap:8px;flex-wrap:wrap}
+
+.rjp{
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:6px 14px;border:1.5px solid var(--border);border-radius:100px;
+  color:var(--muted);cursor:pointer;transition:all .2s;background:white;
+}
+.rjp:hover{border-color:var(--blue);color:var(--blue);background:var(--blueL)}
+.rjp.active{border-color:var(--blue);color:white;background:var(--blue)}
+
+.regionJumpPills {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -311,5 +410,8 @@
   .hstat {
     flex: 1;
     padding: 14px 12px;
+  }
+  .searchStrip{
+    position: static;
   }
 }
