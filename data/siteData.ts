@@ -5,7 +5,9 @@ export const IMG = {
   hero2: '/images/hero/hero-slide2.webp', 
   hero3: '/images/hero/hero-slide3.webp', 
   hero4: '/images/hero/hero-slide4.webp', 
-  hero5: '/images/hero/hero-slide5.webp', 
+  hero5: '/images/hero/hero-slide5.webp',
+  
+  about: '/images/about-pic.webp',
 
   gal1: '/images/gallery/gal1.webp', 
   gal2: '/images/gallery/gal2.webp', 
