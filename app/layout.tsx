@@ -25,7 +25,7 @@ const barlow = Barlow({
 });
 
 const siteName = 'Shaan Painting DS Group Pty Ltd';
-const title = '1.House Painters Melbourne | Interior & Exterior Painting';
+const title = 'House Painters Melbourne | Interior & Exterior Painting';
 const description = 'Expert house painters in Melbourne offering interior and exterior painting services. Free quotes, fully insured, quality workmanship guaranteed.';
 
 export const metadata: Metadata = {
