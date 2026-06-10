@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer/Footer';
 import QuotePopupProvider from '@/components/common/QuotePopupProvider/QuotePopupProvider';
 import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
 import GoogleTestimonials from '@/components/common/GoogleTestimonials/GoogleTestimonials';
+import GoogleTagManager from '@/components/common/GoogleTagManager/GoogleTagManager';
+import GoogleTagManagerNoScript from '@/components/common/GoogleTagManager/GoogleTagManagerNoScript';
 import './globals.css';
 
 const inter = Inter({
@@ -23,8 +25,8 @@ const barlow = Barlow({
 });
 
 const siteName = 'Shaan Painting DS Group Pty Ltd';
-const title = 'House Painters Melbourne, Geelong & Ballarat | Interior & Exterior Painting | Shaan Painting DS Group';
-const description = 'Shaan Painting DS Group provides premium interior and exterior painting services across Melbourne, Geelong, Ballarat and Gippsland. Specialists in house repainting, weatherboards, ceilings, walls, timber restoration and commercial painting. Free quotes. Fully insured. Fully committed.';
+const title = '1.House Painters Melbourne | Interior & Exterior Painting';
+const description = 'Expert house painters in Melbourne offering interior and exterior painting services. Free quotes, fully insured, quality workmanship guaranteed.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shaanpainting.com.au/'),
@@ -103,7 +105,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${barlow.variable}`}>
+      <head>
+        <GoogleTagManager />
+      </head>
       <body>
+        <GoogleTagManagerNoScript />
         <QuotePopupProvider>
           <Header /> 
 
