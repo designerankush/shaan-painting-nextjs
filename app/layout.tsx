@@ -30,7 +30,7 @@ const title = 'House Painters Melbourne | Interior & Exterior Painting';
 const description = 'Expert house painters in Melbourne offering interior and exterior painting services. Free quotes, fully insured, quality workmanship guaranteed.';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shaanpainting.com.au/'),
+  metadataBase: new URL('https://www.shaanpainting.com.au/'),
   title: {
     default: title,
     template: `%s | ${siteName}`,

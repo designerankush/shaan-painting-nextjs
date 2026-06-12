@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const siteUrl = 'https://shaanpainting.com.au';
+const siteUrl = 'https://www.shaanpainting.com.au';
 
 export default function robots(): MetadataRoute.Robots {
   return {
