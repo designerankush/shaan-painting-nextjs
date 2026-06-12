@@ -7,6 +7,7 @@ import MobileSticky from '@/components/common/MobileSticky/MobileSticky';
 import GoogleTestimonials from '@/components/common/GoogleTestimonials/GoogleTestimonials';
 import GoogleTagManager from '@/components/common/GoogleTagManager/GoogleTagManager';
 import GoogleTagManagerNoScript from '@/components/common/GoogleTagManager/GoogleTagManagerNoScript';
+import GoogleAnalytics from '@/components/common/GoogleAnalytics/GoogleAnalytics';
 import './globals.css';
 
 const inter = Inter({
@@ -106,6 +107,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} ${barlow.variable}`}>
       <head>
+        <GoogleAnalytics />
         <GoogleTagManager />
       </head>
       <body>
