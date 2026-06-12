@@ -1,4 +1,4 @@
-.areasSec{background:#0d1117;padding:64px 20px}
+.areasSec{background:#0d1117;padding:64px 0;}
 .areasInner{max-width:1400px;margin:0 auto}
 .areasTop{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px}
 .areasTop h2{font-size:clamp(2rem, 4vw, 3.2rem);font-weight:700;color:var(--white);margin-bottom:6px}
